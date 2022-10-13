@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="rajout src">
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Statistique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statistique.java" afterDir="false" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
