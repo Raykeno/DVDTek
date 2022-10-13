@@ -1,6 +1,7 @@
 public class Client {
     private String nom;
     private int age;
+    private String choixFilm;
     private Agence agence;
 
     public Client(String nom,int age){
@@ -10,6 +11,6 @@ public class Client {
     }
 
     public void demande(String filmDemander){
-
+        this.choixFilm = filmDemander;
     }
 }
