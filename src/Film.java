@@ -3,6 +3,7 @@ public class Film {
     private int prix;
     private String titre;
     private String categorie;
+    private String genre;
 
     private Film film;
 
@@ -10,12 +11,14 @@ public class Film {
         this.prix = 0;
         this.titre = "";
         this.categorie = "";
+        this.genre = "";
     }
 
-    public Film(int prix, String titre, String categorie) {
+    public Film(int prix, String titre, String categorie, String genre) {
         this.prix = prix;
         this.titre = titre;
         this.categorie = categorie;
+        this.genre = genre;
     }
 
     public int getPrix() {
@@ -39,5 +42,13 @@ public class Film {
 
     public void setCategorie(String categorie) {
         this.categorie = categorie;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 }
