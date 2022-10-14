@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Ajout film">
-      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Ajout de facturation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facturation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facturation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +81,7 @@
     <MESSAGE value="Définition de DVD + getter et setters" />
     <MESSAGE value="Fix catégorie" />
     <MESSAGE value="Ajout film" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout film" />
+    <MESSAGE value="Ajout de facturation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de facturation" />
   </component>
 </project>
