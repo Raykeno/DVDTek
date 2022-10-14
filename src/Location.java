@@ -21,7 +21,6 @@ public class Location {
         this.penalite = penalite;
     }
 
-
     public int getDuree() {
         return duree;
     }
