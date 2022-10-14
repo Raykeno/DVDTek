@@ -1,4 +1,5 @@
 public class Location {
+
     private int duree;
     private int prixDuree;
     private String dateRetour;
