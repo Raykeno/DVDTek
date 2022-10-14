@@ -18,6 +18,7 @@ public class Location {
         this.duree = duree;
         this.prixDuree = prixDuree;
         this.dateRetour = dateRetour;
+        this.penalite = penalite;
     }
 
     public int getDuree() {
