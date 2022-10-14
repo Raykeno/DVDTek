@@ -26,12 +26,12 @@ public class Agence {
 
     private List<String> Support = new ArrayList<>(Arrays.asList(Support_Dispo));
     private List<String> Film = new ArrayList<>(Arrays.asList(Film_existant));
-    private List<String> Client = new ArrayList<>(Arrays.asList(Client_existant));
+    private List<String> ListClient = new ArrayList<>(Arrays.asList(Client_existant));
 
 
-    private boolean isknow(String Client){
-        for (int i = 0; i < Client.length(); i++) {
-            if (this.Client.get(i) == Client) {
+    private boolean isknow(Client client){
+        for (int i = 0; i < this.ListClient.size(); i++) {
+            if (this.ListClient.get(i) == client.getNom()) {
                 return true;
             }
         }
