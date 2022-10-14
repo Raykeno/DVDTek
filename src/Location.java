@@ -40,6 +40,7 @@ public class Location {
         return dateRetour;
     }
 
+
     public void setDateRetour(String dateRetour) {
         this.dateRetour = dateRetour;
     }
