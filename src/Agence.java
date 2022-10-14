@@ -27,17 +27,4 @@ public class Agence {
     private List<String> Film = new ArrayList<>(Arrays.asList(Film_existant));
     private List<String> Client = new ArrayList<>(Arrays.asList(Client_existant));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
