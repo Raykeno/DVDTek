@@ -14,7 +14,6 @@ public class Agence {
             "DVD",
             "Blue-Ray",
             "K7"
-
     };
 
     private String[] Client_existant = {
@@ -22,8 +21,6 @@ public class Agence {
             "Kiwi",
             "Cailloux",
             "Caramel"
-
-
     };
 
     private List<String> Support = new ArrayList<>(Arrays.asList(Support_Dispo));
