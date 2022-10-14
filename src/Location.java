@@ -18,6 +18,7 @@ public class Location {
         this.duree = duree;
         this.prixDuree = prixDuree;
         this.dateRetour = dateRetour;
+        this.penalite = penalite;
     }
 
     public int getDuree() {
@@ -39,7 +40,6 @@ public class Location {
     public String getDateRetour() {
         return dateRetour;
     }
-
 
     public void setDateRetour(String dateRetour) {
         this.dateRetour = dateRetour;
