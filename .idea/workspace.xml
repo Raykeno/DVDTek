@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Location" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Ajout film">
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,21 +58,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665761156061</updated>
     </task>
-    <task id="LOCAL-00002" summary="Ajout film">
-      <created>1665761342638</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1665761342639</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Location">
-      <created>1665762914376</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1665762914376</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +79,6 @@
     <MESSAGE value="Définition de DVD + getter et setters" />
     <MESSAGE value="Fix catégorie" />
     <MESSAGE value="Ajout film" />
-    <MESSAGE value="Location" />
-    <option name="LAST_COMMIT_MESSAGE" value="Location" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout film" />
   </component>
 </project>
