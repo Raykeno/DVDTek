@@ -11,7 +11,7 @@ public class Client {
     private Agence agence;
     private List<String> Films = new ArrayList<>();
     private List<String> Support = new ArrayList<>();
-    private List<String> DuréeLocation = new ArrayList<>();
+    private List<Integer> DuréeLocation = new ArrayList<>();
 
 
 
@@ -20,7 +20,9 @@ public class Client {
         this.age = age;
     }
 
-    public void loue(String filmDemander){
-        this.Films.add(filmDemander);
+    public void loue(String filmDemandé, String supportDemandé, int duréeDemandé){
+        this.Films.add(filmDemandé);
+        this.Support.add(supportDemandé);
+        this.DuréeLocation.add(duréeDemandé);
     }
 }
