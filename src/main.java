@@ -10,10 +10,6 @@ public class main {
     Film Interstellar = new Film(28, "Interstellar", "Récent", "ScienceFiction");
     Film Alad2 = new Film(5, "Alad'2", "Récent", "Comédie");
     Film Avatar = new Film(32, "Avatar", "Ancien", "ScienceFiction");
-    Film Titanic = new Film(38, "Titanic", "Ancien", "Drame romantique");
-
-    Support TitanicK7 = new Support(true, Titanic, Support.typeSupport.K7Video);
-    Support LOTRDVD = new Support(false, LOTR, Support.typeSupport.DVD);
-    Support Alad2BluRay = new Support(true, Alad2, Support.typeSupport.BluRay);
-    Support HarryPotterBluRay = new Support(true, HarryPotter, Support.typeSupport.BluRay);
+    Film Titanic = new Film(38, "Titanic", "Ancien", "DrameRomantique");
+    Film StarWars = new Film(38, "Start Wars", "Ancien", "ScienceFiction");
 }
