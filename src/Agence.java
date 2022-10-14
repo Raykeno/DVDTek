@@ -16,6 +16,7 @@ public class Agence {
             "K7"
     };
 
+
     private String[] Client_existant = {
             "Clément",
             "Kiwi",
@@ -26,6 +27,16 @@ public class Agence {
     private List<String> Support = new ArrayList<>(Arrays.asList(Support_Dispo));
     private List<String> Film = new ArrayList<>(Arrays.asList(Film_existant));
     private List<String> Client = new ArrayList<>(Arrays.asList(Client_existant));
+
+
+    private boolean isknow(String Client){
+        for (int i = 0; i < Client.length(); i++) {
+            if (this.Client.get(i) == Client) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 

@@ -11,5 +11,4 @@ public class Client {
         this.age = age;
     }
 
-// connard d'ewan
 }
