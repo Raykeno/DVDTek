@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Coucou">
-      <change afterPath="$PROJECT_DIR$/src/GlobalVals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Ajout film">
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,7 +22,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2G5NI41alehj46czzVg915liM1u" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,14 +49,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665674401737</updated>
       <workItem from="1665674857123" duration="301000" />
-      <workItem from="1665760491644" duration="1806000" />
+      <workItem from="1665760491644" duration="12000" />
     </task>
-    <task id="LOCAL-00001" summary="Coucou">
-      <created>1665760514752</created>
+    <task id="LOCAL-00001" summary="Ajout film">
+      <created>1665761156061</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1665760514752</updated>
+      <updated>1665761156061</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -85,7 +77,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Définition de DVD + getter et setters" />
-    <MESSAGE value="Coucou" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coucou" />
+    <MESSAGE value="Fix catégorie" />
+    <MESSAGE value="Ajout film" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout film" />
   </component>
 </project>
