@@ -17,21 +17,21 @@ public class Agence {
     };
 
 
-    private String[] Client_existant = {
-            "Clément",
-            "Kiwi",
-            "Cailloux",
-            "Caramel"
+    private Client[] Client_existant = {
+            new Client("Clement",20),
+            new Client("Keke",20),
+            new Client("Paul",14),
+            new Client("Arthur",12)
     };
 
     private List<String> Support = new ArrayList<>(Arrays.asList(Support_Dispo));
     private List<String> Film = new ArrayList<>(Arrays.asList(Film_existant));
-    private List<String> ListClient = new ArrayList<>(Arrays.asList(Client_existant));
+    private List<Client> ListClient = new ArrayList<>(Arrays.asList(Client_existant));
 
 
     private boolean isknow(Client client){
         for (int i = 0; i < this.ListClient.size(); i++) {
-            if (this.ListClient.get(i) == client.getNom()) {
+            if (this.ListClient.get(i).getNom() == client.getNom()) {
                 return true;
             }
         }
