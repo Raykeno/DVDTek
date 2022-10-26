@@ -6,6 +6,5 @@ public interface GlobalVals {
      enum categories {Ancien, Recent};
 
      float PRIX_SUPPORT_DVD = 2.10f;
-     float PRIX_SUPPORT_K7 = 2.80f;
      float PRIX_SUPPORT_BLURAY = 2.40f;
 }
