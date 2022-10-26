@@ -58,6 +58,9 @@ public class Film {
         return switch (categorie) {
             case Ancien -> GlobalVals.PRIX_ANCIEN;
             case Recent -> GlobalVals.PRIX_RECENT;
+            case Nouveau -> GlobalVals.PRIX_NOUVEAU;
+            case DeLAnnee -> GlobalVals.PRIX_DELANNEE;
+            case DeLAnPasse -> GlobalVals.PRIX_DELANPASSE;
         };
     }
 }

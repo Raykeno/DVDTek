@@ -8,14 +8,16 @@ public interface GlobalVals {
      float PRIX_DUREE_3 = 1.1f;
 
 
-     enum categories {Ancien, Recent}
+     enum categories {Ancien, Recent, Nouveau, DeLAnnee, DeLAnPasse}
      enum genres {Fantaisie, ScienceFiction, Comedie, DrameRomantique, Action}
      float PRIX_ANCIEN = 2;
-     float PRIX_RECENT = 5;
+     float PRIX_RECENT = 6;
+     float PRIX_NOUVEAU = 8;
+     float PRIX_DELANNEE = 5;
+     float PRIX_DELANPASSE = 4;
 
 
      enum typeSupport {BluRay, DVD}
-
      float PRIX_SUPPORT_DVD = 2.10f;
      float PRIX_SUPPORT_BLURAY = 2.40f;
 }
