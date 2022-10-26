@@ -24,7 +24,7 @@ public class Main {
     Film Titanic = new Film(38, "Titanic", GlobalVals.categories.Ancien, "DrameRomantique");
     Film StarWars = new Film(38, "Start Wars", GlobalVals.categories.Ancien, "ScienceFiction");
 
-    Support HarryPoterDVD = new Support(true, HarryPotter, Support.typeSupport.DVD);
-    Support TitanicBluRay = new Support(true, Titanic, Support.typeSupport.BluRay);
-    Support Alad2BluRay = new Support(false, Alad2, Support.typeSupport.BluRay);
+    Support HarryPoterDVD = new Support(true, HarryPotter, GlobalVals.typeSupport.DVD);
+    Support TitanicBluRay = new Support(true, Titanic, GlobalVals.typeSupport.BluRay);
+    Support Alad2BluRay = new Support(false, Alad2, GlobalVals.typeSupport.BluRay);
 }

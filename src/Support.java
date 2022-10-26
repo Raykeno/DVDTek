@@ -4,18 +4,17 @@ public class Support {
 
     private boolean estDisponible;
     private Film film;
-    public enum typeSupport {BluRay, DVD}
-    private typeSupport support;
+    private GlobalVals.typeSupport support;
 
 
-    public Support(boolean estDisponible, Film film, typeSupport support) {
+    public Support(boolean estDisponible, Film film, GlobalVals.typeSupport support) {
         this.estDisponible = estDisponible;
         this.film = film;
         this.support = support;
     }
 
     public Support(){
-        new Support(false, new Film(), typeSupport.DVD);
+        new Support(false, new Film(), GlobalVals.typeSupport.DVD);
     }
 
     public boolean estDisponible() {
@@ -26,11 +25,11 @@ public class Support {
         this.estDisponible = estDisponible;
     }
 
-    public typeSupport getSupport() {
+    public GlobalVals.typeSupport getSupport() {
         return support;
     }
 
-    public void setSupport(typeSupport support) {
+    public void setSupport(GlobalVals.typeSupport support) {
         this.support = support;
     }
 
@@ -42,7 +41,7 @@ public class Support {
         this.film = film;
     }
 
-    public float getPrixTypeSupport(typeSupport support) throws InvalidTypeSupportFound {
+    public float getPrixTypeSupport(GlobalVals.typeSupport support){
         return switch (support) {
             case DVD -> GlobalVals.PRIX_SUPPORT_DVD;
             case BluRay -> GlobalVals.PRIX_SUPPORT_BLURAY;
