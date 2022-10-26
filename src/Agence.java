@@ -20,8 +20,8 @@ public class Agence {
     };
 
 
-    public List<Film> getFilm() {
-        return Film;
+    public Film[] getFilm_connu() {
+        return Film_connu;
     }
 
     public List<Client> getListClient() {
@@ -30,11 +30,11 @@ public class Agence {
 
 
 
-    private List<Film> Film = new ArrayList<>(Arrays.asList(Film_connu));
+    private List<Film> ListFilm = new ArrayList<>(Arrays.asList(Film_connu));
     private List<Client> ListClient = new ArrayList<>(Arrays.asList(Client_connu));
 
 
-    private boolean isKnown(Client client) {
+    private boolean clientIsKnown(Client client) {
         for (int i = 0; i < this.ListClient.size(); i++) {
             if (this.ListClient.get(i).getNom() == client.getNom()) {
                 System.out.println("Client connu");
@@ -45,6 +45,15 @@ public class Agence {
         this.ListClient.add(client);
         return false;
     }
-
-
+//
+    private boolean filmIsKnown(Film film) {
+        for (int i = 0; i < this.ListFilm.size(); i++) {
+            if (this.ListClient.get(i).getNom() == film.getTitre()) {
+                System.out.println("Film connu");
+                return true;
+            }
+        }
+        System.out.println("Film inconnu dans notre agence");
+        return false;
+    }
 }
