@@ -4,6 +4,7 @@ public interface GlobalVals {
      int Duree_3 = 72;
 
      enum categories {Ancien, Recent}
+     enum genres {Fantaisie, ScienceFiction, Comedie, DrameRomantique, Action}
 
      enum typeSupport {BluRay, DVD}
 
