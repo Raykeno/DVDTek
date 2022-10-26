@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Création du package Exception + changements dans support + prix des types">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support.java" afterDir="false" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Coucou">
+      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665764393024</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Coucou">
+      <created>1666800448417</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666800448417</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,8 +102,8 @@
     <MESSAGE value="Définition de DVD + getter et setters" />
     <MESSAGE value="Fix catégorie" />
     <MESSAGE value="Ajout film" />
-    <MESSAGE value="Coucou" />
     <MESSAGE value="Add penalite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add penalite" />
+    <MESSAGE value="Coucou" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coucou" />
   </component>
 </project>
