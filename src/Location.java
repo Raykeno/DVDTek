@@ -2,22 +2,22 @@
 public class Location {
 
     private int duree;
-    private int prixDuree;
+    private float prixDuree;
     private String dateRetour;
-    private int penalite;
-    private int remboursement;
+    private float penalite;
+    private float remboursement;
 
     private Location location;
 
     public Location() {
         this.duree = 0;
-        this.prixDuree = 0;
+        this.prixDuree = 0f;
         this.dateRetour = "";
-        this.penalite = 0;
-        this.remboursement = 0;
+        this.penalite = 0f;
+        this.remboursement = 0f;
     }
 
-    public Location(int duree, int prixDuree, String dateRetour, int penalite, int remboursement) {
+    public Location(int duree, float prixDuree, String dateRetour, float penalite, float remboursement) {
         this.duree = duree;
         this.prixDuree = prixDuree;
         this.dateRetour = dateRetour;
@@ -33,11 +33,11 @@ public class Location {
         this.duree = duree;
     }
 
-    public int getPrixDuree() {
+    public float getPrixDuree() {
         return prixDuree;
     }
 
-    public void setPrixDuree(int prixDuree) {
+    public void setPrixDuree(float prixDuree) {
         this.prixDuree = prixDuree;
     }
 
@@ -49,34 +49,34 @@ public class Location {
         this.dateRetour = dateRetour;
     }
 
-    public int getPenalite() {
+    public float getPenalite() {
         return penalite;
     }
 
-    public void setPenalite(int penalite) {
+    public void setPenalite(float penalite) {
         this.penalite = penalite;
     }
 
-    public int getRemboursement() {
+    public float getRemboursement() {
         return remboursement;
     }
 
-    public void setRemboursement(int remboursement) {
+    public void setRemboursement(float remboursement) {
         this.remboursement = remboursement;
     }
 
     public void calculerPenalite(int retard) {
         // retard en jour, penalite en euro
         if (retard <= 1) {
-            penalite = 2;
+            penalite = 2f;
         } else if (retard <= 2) {
-            penalite = 5;
+            penalite = 5f;
         } else if (retard <= 3) {
-            penalite = 10;
+            penalite = 10f;
         } else if (retard <= 4) {
-            penalite = 15;
+            penalite = 15f;
         } else {
-            penalite = 20;
+            penalite = 20f;
         }
     }
 
