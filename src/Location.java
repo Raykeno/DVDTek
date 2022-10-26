@@ -1,3 +1,4 @@
+//Léo
 public class Location {
 
     private int duree;
