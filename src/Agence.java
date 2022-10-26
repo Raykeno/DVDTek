@@ -37,10 +37,11 @@ public class Agence {
     private boolean isKnown(Client client) {
         for (int i = 0; i < this.ListClient.size(); i++) {
             if (this.ListClient.get(i).getNom() == client.getNom()) {
-
+                System.out.println("Client connu");
                 return true;
             }
         }
+        System.out.println("Nouveau client ajouté a la bdd client");
         this.ListClient.add(client);
         return false;
     }
