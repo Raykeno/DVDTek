@@ -1,7 +1,11 @@
 public interface GlobalVals {
-     int Duree_1 = 24;
-     int Duree_2 = 48;
-     int Duree_3 = 72;
+     int DUREE_1 = 24;
+     int DUREE_2 = 48;
+     int DUREE_3 = 72;
+
+     float PRIX_DUREE_1 = 0.5f;
+     float PRIX_DUREE_2 = 0.7f;
+     float PRIX_DUREE_3 = 1.1f;
 
      enum categories {Ancien, Recent}
 
