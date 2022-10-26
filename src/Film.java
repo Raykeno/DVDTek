@@ -1,8 +1,8 @@
+//Léo
 public class Film {
 
     private int prix;
     private String titre;
-
     private GlobalVals.categories categorie;
     private String genre;
 
