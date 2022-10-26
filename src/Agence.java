@@ -32,14 +32,16 @@ public class Agence {
 
     private List<Film> Film = new ArrayList<>(Arrays.asList(Film_connu));
     private List<Client> ListClient = new ArrayList<>(Arrays.asList(Client_connu));
-//tes
 
-    private boolean isknow(Client client) {
+
+    private boolean isKnown(Client client) {
         for (int i = 0; i < this.ListClient.size(); i++) {
             if (this.ListClient.get(i).getNom() == client.getNom()) {
+
                 return true;
             }
         }
+        this.ListClient.add(client);
         return false;
     }
 
