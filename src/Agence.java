@@ -5,10 +5,10 @@ import java.util.List;
 public class Agence {
 
     private Film[] Film_connu = {
-            new Film(15,"Harry Potter 7", "Ancien","SF"),
-            new Film(20,"Plancha", "Récent","Comedie"),
-            new Film(2,"Transformers 1", "Ancien","SF"),
-            new Film(5,"Transporteur 3", "Ancien","Action")
+            new Film(15,"Harry Potter 7", GlobalVals.categories.Ancien,"SF"),
+            new Film(20,"Plancha", GlobalVals.categories.Recent,"Comedie"),
+            new Film(2,"Transformers 1", GlobalVals.categories.Ancien,"SF"),
+            new Film(5,"Transporteur 3", GlobalVals.categories.Ancien,"Action")
     };
 
 
