@@ -42,7 +42,7 @@ public class Support {
         this.film = film;
     }
 
-    public float getPrixTypeSupport(typeSupport support){
+    public float getPrixTypeSupport(typeSupport support) throws InvalidTypeSupportFound {
         return switch (support) {
             case DVD -> GlobalVals.PRIX_SUPPORT_DVD;
             case BluRay -> GlobalVals.PRIX_SUPPORT_BLURAY;
