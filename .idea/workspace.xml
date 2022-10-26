@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Coucou" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Création du package Exception + changements dans support + prix des types">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +39,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -48,6 +53,7 @@
       <updated>1665674401737</updated>
       <workItem from="1665674857123" duration="301000" />
       <workItem from="1665760491644" duration="12000" />
+      <workItem from="1665764370567" duration="436000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>
@@ -63,12 +69,12 @@
       <option name="project" value="LOCAL" />
       <updated>1665763323279</updated>
     </task>
-    <task id="LOCAL-00003" summary="Coucou">
-      <created>1665765756907</created>
+    <task id="LOCAL-00003" summary="Add penalite">
+      <created>1665764393024</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1665765756907</updated>
+      <updated>1665764393024</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -92,6 +98,7 @@
     <MESSAGE value="Fix catégorie" />
     <MESSAGE value="Ajout film" />
     <MESSAGE value="Coucou" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coucou" />
+    <MESSAGE value="Add penalite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add penalite" />
   </component>
 </project>
