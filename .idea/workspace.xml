@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="film genres">
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="film catégorie fix">
+      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GlobalVals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalVals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +77,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665764393024</updated>
     </task>
-    <task id="LOCAL-00004" summary="film genres">
-      <created>1666800788279</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1666800788279</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,7 +100,6 @@
     <MESSAGE value="Ajout film" />
     <MESSAGE value="Coucou" />
     <MESSAGE value="Add penalite" />
-    <MESSAGE value="film genres" />
-    <option name="LAST_COMMIT_MESSAGE" value="film genres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add penalite" />
   </component>
 </project>
