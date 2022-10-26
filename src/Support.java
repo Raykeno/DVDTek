@@ -1,9 +1,12 @@
+import Exception.InvalidTypeSupportFound;
+
 public class Support {
 
     private boolean estDisponible;
     private Film film;
-    public enum typeSupport {BluRay, DVD, K7Video}
+    public enum typeSupport {BluRay, DVD}
     private typeSupport support;
+
 
     public Support(boolean estDisponible, Film film, typeSupport support) {
         this.estDisponible = estDisponible;
@@ -39,5 +42,11 @@ public class Support {
         this.film = film;
     }
 
+    public float getPrixTypeSupport(typeSupport support){
+        return switch (support) {
+            case DVD -> GlobalVals.PRIX_SUPPORT_DVD;
+            case BluRay -> GlobalVals.PRIX_SUPPORT_BLURAY;
+        };
+    }
 
 }
