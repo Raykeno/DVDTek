@@ -1,7 +1,7 @@
 //Léo
 public class Location {
 
-    private int duree;
+    private GlobalVals.durees duree;
     private int prixDuree;
     private String dateRetour;
     private int penalite;
@@ -10,27 +10,44 @@ public class Location {
     private Location location;
 
     public Location() {
-        this.duree = 0;
+        this.duree = GlobalVals.durees.DUREE_1;
         this.prixDuree = 0;
         this.dateRetour = "";
         this.penalite = 0;
         this.remboursement = 0;
     }
 
-    public Location(int duree, int prixDuree, String dateRetour, int penalite, int remboursement) {
+    public Location(GlobalVals.durees duree, int prixDuree, String dateRetour, int penalite, int remboursement) {
         this.duree = duree;
-        this.prixDuree = prixDuree;
+        this.prixDuree = getDuree();
         this.dateRetour = dateRetour;
         this.penalite = penalite;
         this.remboursement = remboursement;
     }
 
-    public int getDuree() {
+    public GlobalVals.durees getEnumDuree() {
         return duree;
     }
 
-    public void setDuree(int duree) {
+    public int getDuree(){
+        return switch (duree) {
+            case DUREE_1 -> GlobalVals.DUREE_1;
+            case DUREE_2 -> GlobalVals.DUREE_2;
+            case DUREE_3 -> GlobalVals.DUREE_3;
+        };
+    }
+
+    public void setDuree(GlobalVals.durees duree) {
         this.duree = duree;
+    }
+
+    public void setDureeWithInt(int dureeInt){
+        switch (dureeInt){
+            case 24: duree = GlobalVals.durees.DUREE_1;
+            case 48: duree = GlobalVals.durees.DUREE_2;
+            case 72: duree = GlobalVals.durees.DUREE_3;
+            default: duree = GlobalVals.durees.DUREE_1; // Il faut mettre une bonne valeur!
+        }
     }
 
     public int getPrixDuree() {
@@ -83,7 +100,7 @@ public class Location {
     public void calculerRemboursement(int avance) {
         // avance en heure, remboursement en euro
         if (avance > 0) {
-            remboursement = ((prixDuree/duree)/12) * avance;
+            remboursement = ((prixDuree/getPrixDuree())/12) * avance;
         } else {
             remboursement = 0;
         }
