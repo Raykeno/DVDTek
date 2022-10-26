@@ -25,6 +25,6 @@ public class Main {
     Film StarWars = new Film(38, "Start Wars", "Ancien", "ScienceFiction");
 
     Support HarryPoterDVD = new Support(true, HarryPotter, Support.typeSupport.DVD);
-    Support TitanicK7 = new Support(true, Titanic, Support.typeSupport.K7Video);
+    Support TitanicBluRay = new Support(true, Titanic, Support.typeSupport.BluRay);
     Support Alad2BluRay = new Support(false, Alad2, Support.typeSupport.BluRay);
 }
