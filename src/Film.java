@@ -2,8 +2,8 @@ public class Film {
 
     private int prix;
     private String titre;
-    public enum categories {Ancien, Recent};
-    private categories categorie;
+
+    private GlobalVals.categories categorie;
     private String genre;
 
     private Film film;
@@ -11,11 +11,11 @@ public class Film {
     public Film() {
         this.prix = 0;
         this.titre = "";
-        this.categorie = categories.Ancien;
+        this.categorie = GlobalVals.categories.Ancien;
         this.genre = "";
     }
 
-    public Film(int prix, String titre, categories categorie, String genre) {
+    public Film(int prix, String titre, GlobalVals.categories categorie, String genre) {
         this.prix = prix;
         this.titre = titre;
         this.categorie = categorie;
@@ -37,11 +37,11 @@ public class Film {
         this.titre = titre;
     }
 
-    public categories getCategorie() {
+    public GlobalVals.categories getCategorie() {
         return categorie;
     }
 
-    public void setCategorie(categories categorie) {
+    public void setCategorie(GlobalVals.categories categorie) {
         this.categorie = categorie;
     }
 
