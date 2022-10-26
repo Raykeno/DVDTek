@@ -46,9 +46,9 @@ public class Agence {
         return false;
     }
 //
-    private boolean filmIsKnown(Film film) {
+    private boolean filmIsKnown(String film) {
         for (int i = 0; i < this.ListFilm.size(); i++) {
-            if (this.ListClient.get(i).getNom() == film.getTitre()) {
+            if (this.ListFilm.get(i).getTitre() == film) {
                 System.out.println("Film connu");
                 return true;
             }
