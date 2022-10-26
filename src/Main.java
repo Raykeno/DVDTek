@@ -16,13 +16,13 @@ public class Main {
 
 
     // Création des films
-    Film HarryPotter = new Film(25, "Harry Potter", GlobalVals.categories.Ancien, "Fantaisie");
-    Film LOTR = new Film(45, "The Lord of the Rings", GlobalVals.categories.Ancien, "Fantaisie");
-    Film Interstellar = new Film(28, "Interstellar", GlobalVals.categories.Recent, "ScienceFiction");
-    Film Alad2 = new Film(5, "Alad'2", GlobalVals.categories.Recent, "Comédie");
-    Film Avatar = new Film(32, "Avatar", GlobalVals.categories.Ancien, "ScienceFiction");
-    Film Titanic = new Film(38, "Titanic", GlobalVals.categories.Ancien, "DrameRomantique");
-    Film StarWars = new Film(38, "Start Wars", GlobalVals.categories.Ancien, "ScienceFiction");
+    Film HarryPotter = new Film(25, "Harry Potter", GlobalVals.categories.Ancien, GlobalVals.genres.Fantaisie);
+    Film LOTR = new Film(45, "The Lord of the Rings", GlobalVals.categories.Ancien, GlobalVals.genres.Fantaisie);
+    Film Interstellar = new Film(28, "Interstellar", GlobalVals.categories.Recent, GlobalVals.genres.ScienceFiction);
+    Film Alad2 = new Film(5, "Alad'2", GlobalVals.categories.Recent, GlobalVals.genres.Comedie);
+    Film Avatar = new Film(32, "Avatar", GlobalVals.categories.Ancien, GlobalVals.genres.ScienceFiction);
+    Film Titanic = new Film(38, "Titanic", GlobalVals.categories.Ancien, GlobalVals.genres.DrameRomantique);
+    Film StarWars = new Film(38, "Start Wars", GlobalVals.categories.Ancien, GlobalVals.genres.ScienceFiction);
 
     Support HarryPoterDVD = new Support(true, HarryPotter, GlobalVals.typeSupport.DVD);
     Support TitanicBluRay = new Support(true, Titanic, GlobalVals.typeSupport.BluRay);

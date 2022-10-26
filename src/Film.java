@@ -4,7 +4,7 @@ public class Film {
     private int prix;
     private String titre;
     private GlobalVals.categories categorie;
-    private String genre;
+    private GlobalVals.genres genre;
 
     private Film film;
 
@@ -12,10 +12,10 @@ public class Film {
         this.prix = 0;
         this.titre = "";
         this.categorie = GlobalVals.categories.Ancien;
-        this.genre = "";
+        this.genre = GlobalVals.genres.Fantaisie;
     }
 
-    public Film(int prix, String titre, GlobalVals.categories categorie, String genre) {
+    public Film(int prix, String titre, GlobalVals.categories categorie, GlobalVals.genres genre) {
         this.prix = prix;
         this.titre = titre;
         this.categorie = categorie;
@@ -46,11 +46,11 @@ public class Film {
         this.categorie = categorie;
     }
 
-    public String getGenre() {
+    public GlobalVals.genres getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(GlobalVals.genres genre) {
         this.genre = genre;
     }
 }
