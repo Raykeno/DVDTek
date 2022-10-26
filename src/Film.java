@@ -29,6 +29,7 @@ public class Film {
     public void setPrix(int prix) {
         this.prix = prix;
     }
+
     public String getTitre() {
         return titre;
     }
