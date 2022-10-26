@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="rajout enums durees et leurs prix">
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Création du package Exception + changements dans support + prix des types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GlobalVals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalVals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Support.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,14 +76,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665764393024</updated>
     </task>
-    <task id="LOCAL-00004" summary="Removed tables on Statistique, use GlobalVals">
-      <created>1666801174903</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1666801174903</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,8 +99,6 @@
     <MESSAGE value="Ajout film" />
     <MESSAGE value="Coucou" />
     <MESSAGE value="Add penalite" />
-    <MESSAGE value="Removed tables on Statistique, use GlobalVals" />
-    <MESSAGE value="rajout enums durees et leurs prix" />
-    <option name="LAST_COMMIT_MESSAGE" value="rajout enums durees et leurs prix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add penalite" />
   </component>
 </project>
