@@ -18,7 +18,7 @@ public class Facturation {
         this.film = film;
     }
     public void calculerPrixFinal() {
-        this.prixFinal = (this.location.getDuree() * this.location.getPrixDuree()) + this.film.getPrix();
+        this.prixFinal =  this.location.getPrixDuree() + this.film.getPrix();
     }
 
     public void calculerPrixTTC(){

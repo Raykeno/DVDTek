@@ -11,14 +11,12 @@ public class Agence {
             new Film(5,"Transporteur 3", GlobalVals.categories.Ancien, GlobalVals.genres.Action)
     };
 
-
     private Client[] Client_connu = {
             new Client("Clement", 20, 10f),
             new Client("Keke", 20, 78f),
             new Client("Paul", 14, 72.5f),
             new Client("Arthur", 12, 8.9f)
     };
-
 
     public Film[] getFilm_connu() {
         return Film_connu;
@@ -28,11 +26,9 @@ public class Agence {
         return ListClient;
     }
 
-
-
     private List<Film> ListFilm = new ArrayList<>(Arrays.asList(Film_connu));
-    private List<Client> ListClient = new ArrayList<>(Arrays.asList(Client_connu));
 
+    private List<Client> ListClient = new ArrayList<>(Arrays.asList(Client_connu));
 
     private boolean clientIsKnown(Client client) {
         for (int i = 0; i < this.ListClient.size(); i++) {
@@ -45,7 +41,7 @@ public class Agence {
         this.ListClient.add(client);
         return false;
     }
-//
+
     private boolean filmIsKnown(String film) {
         for (int i = 0; i < this.ListFilm.size(); i++) {
             if (this.ListFilm.get(i).getTitre() == film) {

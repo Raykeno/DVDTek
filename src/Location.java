@@ -1,4 +1,3 @@
-//Léo
 public class Location {
 
     private float prixDuree;
@@ -16,7 +15,6 @@ public class Location {
         this.penalite = 0f;
         this.remboursement = 0f;
     }
-
 
     public Location(GlobalVals.durees duree, int prixDuree, String dateRetour, int penalite, int remboursement) {
         this.duree = duree;
