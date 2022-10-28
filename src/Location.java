@@ -16,7 +16,7 @@ public class Location {
         this.remboursement = 0f;
     }
 
-    public Location(GlobalVals.durees duree, int prixDuree, String dateRetour, int penalite, int remboursement) {
+    public Location(GlobalVals.durees duree, String dateRetour, int penalite, int remboursement) {
         this.duree = duree;
         this.prixDuree = getDuree();
         this.dateRetour = dateRetour;
