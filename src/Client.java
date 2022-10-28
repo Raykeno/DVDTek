@@ -8,6 +8,10 @@ public class Client {
 
     private float argent;
 
+    public float getArgent() {
+        return argent;
+    }
+
     public String getNom() {
         return nom;
     }
