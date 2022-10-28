@@ -24,11 +24,10 @@ public class Client {
     public Client(String nom, int age, float argent) {
         this.nom = nom;
         this.age = age;
+        this.argent = argent;
     }
 
     public Client() {
         this("Ewan", 20, 24.6f);
     }
 }
-
-
