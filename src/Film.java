@@ -1,4 +1,3 @@
-//Léo
 public class Film {
 
     private float prix;

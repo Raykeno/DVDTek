@@ -1,4 +1,3 @@
-//Léo
 public class Reglement {
 
     private Client client;

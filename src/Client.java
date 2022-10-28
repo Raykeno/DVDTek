@@ -4,6 +4,7 @@ import java.util.List;
 public class Client {
 
     private String nom;
+
     private int age;
 
     private float argent;
@@ -20,16 +21,14 @@ public class Client {
         return age;
     }
 
-    public Client(String nom, int age, float argent){
+    public Client(String nom, int age, float argent) {
         this.nom = nom;
         this.age = age;
     }
 
-    public Client(){
-        this("John", 20, 10f);
+    public Client() {
+        this("Ewan", 20, 24.6f);
     }
-
-
 }
 
 
