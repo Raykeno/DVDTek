@@ -101,7 +101,7 @@ public class Location {
     public void calculerRemboursement(int avance) {
         // avance en heure, remboursement en euro
         if (avance > 0) {
-            remboursement = ((prixDuree/getPrixDuree())/12) * avance;
+            remboursement = ((prixDuree/getDuree())/12) * avance;
         } else {
             remboursement = 0;
         }

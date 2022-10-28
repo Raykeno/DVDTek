@@ -54,7 +54,7 @@ public class Film {
         this.genre = genre;
     }
 
-    public float getPrixCategorie(GlobalVals.categories categorie){
+    public float getPrixCategorie(GlobalVals.categories categorie) {
         return switch (categorie) {
             case Ancien -> GlobalVals.PRIX_ANCIEN;
             case Recent -> GlobalVals.PRIX_RECENT;
