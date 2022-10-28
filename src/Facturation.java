@@ -3,14 +3,11 @@ public class Facturation {
     private float prixFinal; // Prix Durée * Durée
 
     private float prixTTC; // Prix Final + Calcul pénalité de Location
-    private enum TypePaiement {
-        CB, Cheque, Espece
-    }
-    private TypePaiement typeDePaiementChoisi;
+    private GlobalVals.typePaiement typeDePaiementChoisi;
     private Location location;
     private Film film;
 
-    public Facturation(TypePaiement typeDePaiementChoisi, Location location, Film film) {
+    public Facturation(GlobalVals.typePaiement typeDePaiementChoisi, Location location, Film film) {
         this.prixFinal = 0;
         this.prixTTC = 0;
         this.typeDePaiementChoisi = typeDePaiementChoisi;
@@ -41,11 +38,11 @@ public class Facturation {
         this.prixTTC = prixTTC;
     }
 
-    public TypePaiement getTypeDePaiementChoisi() {
+    public GlobalVals.typePaiement getTypeDePaiementChoisi() {
         return typeDePaiementChoisi;
     }
 
-    public void setTypeDePaiementChoisi(TypePaiement typeDePaiementChoisi) {
+    public void setTypeDePaiementChoisi(GlobalVals.typePaiement typeDePaiementChoisi) {
         this.typeDePaiementChoisi = typeDePaiementChoisi;
     }
 

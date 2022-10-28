@@ -7,6 +7,10 @@ public interface GlobalVals {
      // Les Duréees sont limitées à 24, 48, 72 heures
      enum durees {DUREE_1, DUREE_2, DUREE_3}
 
+     enum typePaiement {
+          CB, Cheque, Espece
+     }
+
      float PRIX_DUREE_1 = 0.5f;
      float PRIX_DUREE_2 = 0.7f;
      float PRIX_DUREE_3 = 1.1f;
