@@ -106,4 +106,16 @@ public class Location {
             remboursement = 0;
         }
     }
+
+      /*public void Prepayer(Boolean prepaye) {
+        // Savoir si le client possède une carte prépayé
+        if (prepaye==true) {
+            remboursement = ((prixDuree/getDuree())/12) * avance;
+        } else {
+            remboursement = 0;
+        }
+    }*/
+
+
+
 }
