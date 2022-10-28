@@ -8,15 +8,17 @@ public class Facturation {
     }
     private TypePaiement typeDePaiementChoisi;
     private Location location;
+    private Film film;
 
-    public Facturation(TypePaiement typeDePaiementChoisi, Location location) {
+    public Facturation(TypePaiement typeDePaiementChoisi, Location location, Film film) {
         this.prixFinal = 0;
         this.prixTTC = 0;
         this.typeDePaiementChoisi = typeDePaiementChoisi;
         this.location = location;
+        this.film = film;
     }
     public void calculerPrixFinal() {
-        this.prixFinal = this.location.getDuree() * this.location.getPrixDuree();
+        this.prixFinal = (this.location.getDuree() * this.location.getPrixDuree()) + this.film.getPrix();
     }
 
     public void calculerPrixTTC(){
