@@ -112,7 +112,7 @@ public class Location {
 
 
 
-      public void Prepayer(Boolean prepaye) {
+      /*public void Prepayer(Boolean prepaye) {
         // Savoir si le client possède une carte prépayé
         if (prepaye==true) {
             
@@ -137,7 +137,7 @@ public class Location {
 
 
 
-    }
+    }*/
 
 
 
