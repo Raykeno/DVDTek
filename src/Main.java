@@ -1,11 +1,12 @@
 public class Main {
+
     public static void main(String[] args) {
         // Scénario 1 : Le client arrive dans l'agence et demande plusieurs films et leurs durées
         System.out.println("Scenario 1 \n");
         // Méthode envoyer une list de film a Agence
         System.out.println("Le client choisi [Nom des Film/s]");
         // Agence va utiliser des méthodes pour vérifier si les films en question existe et répond en conséquences
-        System.out.println("Il y a [Film] disponible, et [Film pas disponible");
+        System.out.println("Il y a [Film] disponible, et [Film pas disponible]");
         System.out.println("Prix : [prixFilm0], [prixFilm1], [prixFilmN]");
         System.out.println("Choisir Durée : [DuréeLocationFilm1],[DuréeLocationFilm2],[DuréeLocationFilmN],");
         System.out.println("Prix Total : [ToutLesPrixFinalFilms]?");
