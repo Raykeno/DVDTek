@@ -1,5 +1,5 @@
 public class Main {
-    Client Ewan = new Client("Ewan", 20);
+    Client Ewan = new Client("Ewan", 20, 24.6f);
 
 
     public static void main(String[] args) {

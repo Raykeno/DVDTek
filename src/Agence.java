@@ -13,10 +13,10 @@ public class Agence {
 
 
     private Client[] Client_connu = {
-            new Client("Clement", 20),
-            new Client("Keke", 20),
-            new Client("Paul", 14),
-            new Client("Arthur", 12)
+            new Client("Clement", 20, 10f),
+            new Client("Keke", 20, 78f),
+            new Client("Paul", 14, 72.5f),
+            new Client("Arthur", 12, 8.9f)
     };
 
 

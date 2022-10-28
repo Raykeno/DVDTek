@@ -18,12 +18,15 @@ public class Location {
     }
 
 
-    public Location(GlobalVals.durees duree, int prixDuree, String dateRetour, int penalite, int remboursement) {
+    public Location(GlobalVals.durees duree, String dateRetour, int penalite, int remboursement) {
         this.duree = duree;
-        this.prixDuree = getDuree();
+        this.prixDuree = 0;
         this.dateRetour = dateRetour;
         this.penalite = penalite;
         this.remboursement = remboursement;
+
+       setPresetPrixDuree(duree);
+
     }
 
     public GlobalVals.durees getEnumDuree() {
@@ -44,9 +47,9 @@ public class Location {
 
     public void setDureeWithInt(int dureeInt){
         switch (dureeInt){
-            case 24: duree = GlobalVals.durees.DUREE_1;
-            case 48: duree = GlobalVals.durees.DUREE_2;
-            case 72: duree = GlobalVals.durees.DUREE_3;
+            case 24: this.duree = GlobalVals.durees.DUREE_1;
+            case 48: this.duree = GlobalVals.durees.DUREE_2;
+            case 72: this.duree = GlobalVals.durees.DUREE_3;
             default: duree = GlobalVals.durees.DUREE_1; // Il faut mettre une bonne valeur!
         }
     }
@@ -57,6 +60,16 @@ public class Location {
 
     public void setPrixDuree(int prixDuree) {
         this.prixDuree = prixDuree;
+    }
+
+
+    // On utilise les prix dans GlobalVals
+    public void setPresetPrixDuree(GlobalVals.durees duree){
+        switch (duree){
+            case DUREE_1: this.prixDuree = GlobalVals.PRIX_DUREE_1;
+            case DUREE_2: this.prixDuree = GlobalVals.PRIX_DUREE_2;
+            case DUREE_3: this.prixDuree = GlobalVals.PRIX_DUREE_3;
+        }
     }
 
     public String getDateRetour() {
