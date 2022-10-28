@@ -98,6 +98,8 @@ public class Location {
         }
     }
 
+
+
     public void calculerRemboursement(int avance) {
         // avance en heure, remboursement en euro
         if (avance > 0) {
@@ -108,14 +110,35 @@ public class Location {
     }
 
 
-      /*public void Prepayer(Boolean prepaye) {
+
+
+      public void Prepayer(Boolean prepaye) {
         // Savoir si le client possède une carte prépayé
         if (prepaye==true) {
-            remboursement = ((prixDuree/getDuree())/12) * avance;
+            
+            int avance = 0;
+
+            if (avance>=0 && avance <= 12) {
+                remboursement = ((prixDuree/getDuree())/12) * avance;
+            } else if (avance>=12 && avance <= 24) {
+                remboursement = ((prixDuree/getDuree())/12) * avance;
+            } else if (avance>=24 && avance <= 36) {
+                remboursement = ((prixDuree/getDuree())/12) * avance;
+            } else if (avance>=36 && avance <= 48) {
+                remboursement = ((prixDuree/getDuree())/12) * avance;
+            } else if(avance>=48 && avance <= 60) {
+                remboursement = ((prixDuree/getDuree())/12) * avance;
+            }else {
+                remboursement = 0;
+            }
         } else {
             remboursement = 0;
         }
-    }*/
+
+
+
+    }
+
 
 
 
