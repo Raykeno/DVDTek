@@ -1,5 +1,4 @@
 import MoyenDePaiement.CarteBancaire;
-import MoyenDePaiement.Cheque;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -51,6 +50,12 @@ public class Scenario {
         agence.printLocalFilmList();
 
         System.out.println("\nLe client choisi " + film.getTitre()+"\n");
+
+        if (!support.estDisponible()) {
+            System.out.println("Le client a choisi un film avec un support qui n'est pas disponible");
+            System.out.println("Le client quitte le magasin...");
+            return;
+        }
 
         location.calculerPenalite(0);
         facturation.calculerPrixFinal();

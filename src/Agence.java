@@ -1,18 +1,13 @@
 import MoyenDePaiement.IMoyenDePaiement;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 // verbose cela veut dire que la fonction fait des prints pour indiquer certains états
 // Sa ce peut que je mette ce boolean pour certaines fonctions, il faut juste mettre false si on ne veut pas de prints
 
 public class Agence {
-
     private Client clientActuel;
-    private List<Location> ListLocation = new ArrayList<>();
 
     // MockData pour tester
     private final Film[] Film_connu = {
@@ -23,10 +18,17 @@ public class Agence {
     };
 
     private final Support[] Support_connu = {
-            new Support(true, Film_connu[0], GlobalVals.typeSupport.DVD),
-            new Support(true, Film_connu[1], GlobalVals.typeSupport.BluRay),
+            new Support(false, Film_connu[0], GlobalVals.typeSupport.DVD),
+            new Support(true, Film_connu[0], GlobalVals.typeSupport.BluRay),
+            new Support(true, Film_connu[0], GlobalVals.typeSupport.BluRay),
+            new Support(false, Film_connu[1], GlobalVals.typeSupport.BluRay),
+            new Support(true, Film_connu[1], GlobalVals.typeSupport.DVD),
             new Support(true, Film_connu[2], GlobalVals.typeSupport.DVD),
-            new Support(true, Film_connu[3], GlobalVals.typeSupport.BluRay)
+            new Support(false, Film_connu[2], GlobalVals.typeSupport.BluRay),
+            new Support(false, Film_connu[3], GlobalVals.typeSupport.BluRay),
+            new Support(true, Film_connu[3], GlobalVals.typeSupport.BluRay),
+            new Support(true, Film_connu[3], GlobalVals.typeSupport.BluRay),
+            new Support(false, Film_connu[3], GlobalVals.typeSupport.DVD)
     };
 
     private final Client[] Client_connu = {
@@ -36,6 +38,12 @@ public class Agence {
             new Client("Arthur", 12, 8.9f)
     };
 
+    private final Location[] Location_connu = {
+            new Location(GlobalVals.durees.DUREE_1, new GregorianCalendar(), 0, 0),
+            new Location(GlobalVals.durees.DUREE_2, new GregorianCalendar(), 0, 0)
+    };
+
+    private List<Location> ListLocation = new ArrayList<>(Arrays.asList(Location_connu));
     private List<Film> ListFilm = new ArrayList<>(Arrays.asList(Film_connu));
     private List<Client> ListClient = new ArrayList<>(Arrays.asList(Client_connu));
 
@@ -84,6 +92,29 @@ public class Agence {
         return returnFilmList;
     }
 
+    public List<Support> getSupportListFromSpecificSupport(GlobalVals.typeSupport typeSupport, boolean verbose){
+        List<Support> returnSupportList = new ArrayList<>();
+        for (Support support: this.ListSupport) {
+            if (support.getSupport() == typeSupport){
+                returnSupportList.add(support);
+            }
+        }
+        if (returnSupportList.size() == 0){
+            if (verbose) {
+                System.out.println("Il n'y a plus de " +typeSupport+ " dans notre agence");
+            }
+        }
+        return returnSupportList;
+    }
+
+    public void getSupportListFromSpecificSupportPrint(GlobalVals.typeSupport typeSupport){
+        List<Support> supportList = getSupportListFromSpecificSupport(typeSupport, false);
+        if (supportList.size() == 0) {
+            System.out.println("Il n'y a plus de " +typeSupport+ " dans notre agence");
+        }
+        printSupportList(supportList);
+    }
+
     public void getFilmListFromGenrePrint(GlobalVals.genres genre){
         List<Film> genreListFilm = getFilmListFromGenre(genre, false);
         if (genreListFilm.size() == 0) {
@@ -96,7 +127,7 @@ public class Agence {
 
     public void printFilmList(@NotNull List<Film> filmList){
         for (Film film: filmList) {
-            System.out.println(film.getTitre() + " -> " + film.getPrix() + " €");
+            System.out.println(film.getTitre() + " pour " + film.getPrix() + " €");
         }
     }
 
@@ -107,14 +138,35 @@ public class Agence {
 
     public void printClientList(@NotNull List<Client> clientList){
         for (Client client: clientList) {
-            System.out.println(client.getNom() + " , " + client.getAge() + " ans");
+            System.out.println(client.getNom() + ", " + client.getAge() + " ans");
         }
+    }
+
+    public void printLocalClientList(){
+        System.out.println("Voici une liste de tout nos clients avec leur age");
+        printClientList(this.ListClient);
     }
 
     public void printLocationList(@NotNull List<Location> locationList){
         for (Location location: locationList) {
             System.out.println(location.getDuree() + ", " + location.getDateRetourToString());
         }
+    }
+
+    public void printLocalLocationList(){
+        System.out.println("Voici une liste de tout nos location avec duree et date de retour");
+        printLocationList(this.ListLocation);
+    }
+
+    public void printSupportList(@NotNull List<Support> supportList){
+        for (Support support: supportList) {
+            System.out.println(support.getFilm().getTitre() + " en " +  support.getSupport());
+        }
+    }
+
+    public void printLocalSupportList(){
+        System.out.println("Voici une liste de tout nos supports avec les films associées");
+        printSupportList(this.ListSupport);
     }
 
     // ---------------------------------- Fonctions de Test si connu -----------------------------------
