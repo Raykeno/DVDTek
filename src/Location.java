@@ -1,24 +1,31 @@
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public class Location {
 
     private float prixDuree;
     private GlobalVals.durees duree;
-    private String dateRetour;
+    private Calendar dateDebut;
+
+    private Calendar dateRetour;
     private float penalite;
     private float remboursement;
 
-    private Location location;
 
     public Location() {
         this.duree = GlobalVals.durees.DUREE_1;
         this.prixDuree = 0f;
-        this.dateRetour = "";
+        this.dateDebut = new GregorianCalendar();
+        this.dateRetour = new GregorianCalendar(); // Il faut set la date de retour....
         this.penalite = 0f;
         this.remboursement = 0f;
     }
 
-    public Location(GlobalVals.durees duree, String dateRetour, int penalite, int remboursement) {
+    public Location(GlobalVals.durees duree, Calendar dateRetour, int penalite, int remboursement) {
         this.duree = duree;
         this.prixDuree = getDuree();
+        this.dateDebut = new GregorianCalendar();
         this.dateRetour = dateRetour;
         this.penalite = penalite;
         this.remboursement = remboursement;
@@ -57,11 +64,23 @@ public class Location {
         this.prixDuree = prixDuree;
     }
 
-    public String getDateRetour() {
+    public Calendar getDateDebut() {
+        return dateDebut;
+    }
+
+    public Calendar getDateRetour() {
         return dateRetour;
     }
 
-    public void setDateRetour(String dateRetour) {
+    public Date getDateRetourToString(){
+        return dateRetour.getTime();
+    }
+
+    public Date getDateDebutToString(){
+        return dateDebut.getTime();
+    }
+
+    public void setDateRetour(Calendar dateRetour) {
         this.dateRetour = dateRetour;
     }
 
@@ -109,7 +128,7 @@ public class Location {
 
     public void Prepayer(Boolean prepaye) {
         // Savoir si le client possède une carte prépayé
-        if (prepaye == true) {
+        if (prepaye) {
             int avance = 0;
 
             if (avance >= 0 && avance <= 12) {

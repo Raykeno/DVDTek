@@ -1,5 +1,6 @@
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Random;
-import java.util.random.*;
 public class Main {
 
     public Agence agence;
@@ -14,14 +15,18 @@ public class Main {
     public void init(){
 
         Random random = new Random();
+
         agence = new Agence();
         client = agence.getListClient().get(0);
         film = agence.getListFilm().get(0);
+        Calendar date = new GregorianCalendar();
+        date.set(2022, Calendar.MARCH, 20);
 
-        Location location = new Location(GlobalVals.durees.DUREE_1,"03/10/2022", 10, 10 );
+        Location location = new Location(GlobalVals.durees.DUREE_1, date, 10, 10 );
         Facturation facturation = new Facturation(GlobalVals.typePaiement.CB, location, film);
 
-        System.out.println("Le client " + client.getNom() + " entre dans le magasin, il a " + client.getArgent() + " €");
+        agence.clientEntreDansAgence(client, true);
+
         // Scénario 1 : Le client arrive dans l'agence et demande plusieurs films et leurs durées
         System.out.println("Scenario 1 \n");
         // Méthode envoyer une list de film a Agence
@@ -33,16 +38,16 @@ public class Main {
             System.out.println(film.getTitre() + " -> " + film.getPrix() + " €");
         }
 
-        System.out.println("");
+        System.out.println("\nLe client choisi " + film.getTitre()+"\n");
 
-        System.out.println("Le client choisi " + agence.getListFilm().get(random.nextInt(0, agence.getListFilm().size())).getTitre());
-
-        System.out.println("");
 
         int dureeChoisi = GlobalVals.DUREE_1;
 
-        System.out.println("Choisi la  Durée : " + dureeChoisi + " h");
-        System.out.println("Prix Total : [ToutLesPrixFinalFilms]?");
+        location.calculerPenalite(2);
+        facturation.calculerPrixFinal();
+
+        System.out.println("Le client a choisi ce film pour une durée de : " + dureeChoisi + " h");
+        System.out.println("Prix Total : " + facturation.getPrixFinal() + "?");
     }
 
 }
