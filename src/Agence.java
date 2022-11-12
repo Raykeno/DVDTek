@@ -1,3 +1,4 @@
+import MoyenDePaiement.IMoyenDePaiement;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -154,5 +155,17 @@ public class Agence {
             }
             addClientToList(client);
         }
+    }
+
+    public boolean payerLaFacture(Client client, Facturation facture, IMoyenDePaiement moyenDePaiement){
+        System.out.println("Le client va utiliser un/une " + moyenDePaiement.getNom()+ "\n");
+        facture.calculerPrixFinal();
+        if (client.getArgent() < facture.getPrixFinal()){
+            System.out.println("le client n'a pas assez d'argent pour payer sa facture");
+            return false;
+        }
+        client.setArgent(client.getArgent() - facture.getPrixFinal());
+        System.out.println("Le client a payé la facture, il lui reste : " + client.getArgent() + " euros");
+        return true;
     }
 }

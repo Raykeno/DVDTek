@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Mis le scénario dans sa propre classe + mis du random pour tester">
-      <change beforePath="$PROJECT_DIR$/src/Facturation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facturation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Rajout du prix categorie dans le calcul du prix">
+      <change afterPath="$PROJECT_DIR$/src/MoyenDePaiement/CarteBancaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoyenDePaiement/Cheque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoyenDePaiement/Espece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoyenDePaiement/IMoyenDePaiement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GlobalVals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalVals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -82,7 +90,7 @@
       <workItem from="1666969885354" duration="1029000" />
       <workItem from="1667667924860" duration="1067000" />
       <workItem from="1668002234027" duration="2032000" />
-      <workItem from="1668256745771" duration="10346000" />
+      <workItem from="1668256745771" duration="11988000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>
@@ -140,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668267124498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Rajout du prix categorie dans le calcul du prix">
+      <created>1668267471941</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668267471941</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +183,7 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="Rajout de certaines fonctions, rajout d'une liste support et location agence&#10;Pour ce commit j'ai modifié un peu partout, le but est de prendre le scenar du main et de le mettre dans agence pour que la classe Agence devienne la classe qui gère tout" />
     <MESSAGE value="Mis le scénario dans sa propre classe + mis du random pour tester" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mis le scénario dans sa propre classe + mis du random pour tester" />
+    <MESSAGE value="Rajout du prix categorie dans le calcul du prix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rajout du prix categorie dans le calcul du prix" />
   </component>
 </project>

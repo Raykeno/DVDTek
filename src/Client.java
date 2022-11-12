@@ -1,3 +1,4 @@
+import MoyenDePaiement.IMoyenDePaiement;
 
 public class Client {
 
@@ -30,5 +31,9 @@ public class Client {
 
     public int getAge() {
         return age;
+    }
+
+    public void setArgent(float argent){
+        this.argent = argent;
     }
 }

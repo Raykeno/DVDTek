@@ -10,6 +10,7 @@ public interface GlobalVals {
      enum typePaiement {
           CB, Cheque, Espece
      }
+     String CB = "Carte banquaire";
 
      float PRIX_DUREE_1 = 0.5f;
      float PRIX_DUREE_2 = 0.7f;

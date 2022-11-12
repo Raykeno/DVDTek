@@ -1,3 +1,6 @@
+import MoyenDePaiement.CarteBancaire;
+import MoyenDePaiement.Cheque;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Random;
@@ -58,9 +61,13 @@ public class Scenario {
         // Print pour vérifier le calcul
         System.out.println(
                 "(" + support.getPrixTypeSupport() + " eur support, " + film.getPrix() + " eur film, " + location.getPrixDuree()
-                + " eur duree, " + film.getPrixCategorie() + " eur categorie)");
+                + " eur duree, " + film.getPrixCategorie() + "eur categorie)\n");
 
-        System.out.println("le client devra revenir le " + location.getDateRetourToString() + " , pour ne pas avoir de penalité");
+        boolean didTheyPay = agence.payerLaFacture(client, facturation, new CarteBancaire());
+
+        if (didTheyPay) {
+            System.out.println("\nle client devra revenir le " + location.getDateRetourToString() + " , pour ne pas avoir de penalité");
+        }
     }
 
     public static GlobalVals.durees randomDuree(Random random)  {

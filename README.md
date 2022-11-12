@@ -14,7 +14,7 @@ Dans la constitution du prix de location il faut prendre en compte :
 - [x] le support DVD ou Blue Ray
 - [x] la catégorie du film (nouveauté, récent, de l’année, de l’an passé, plus ancien) pour laquelle il y a une tarification.
 - [x] la durée prévue de la location dont le tarif peut ne pas être linéaire (cad différent d’un prix par jour * nombre de jours)
-- [ ] Pour effectuer le règlement, le client peut utiliser différents moyens (CB, chèque, espèce).
+- [x] Pour effectuer le règlement, le client peut utiliser différents moyens (CB, chèque, espèce).
 
 Étape 2 :
 
