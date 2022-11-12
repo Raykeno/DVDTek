@@ -201,7 +201,7 @@ public class Agence {
         if (verbose) {
             System.out.println("Le client " + client.getNom() + " entre dans le magasin, il a " + client.getArgent() + " €");
         }
-        if (clientIsKnown(client)){
+        if (!clientIsKnown(client)){
             if (verbose) {
                 System.out.println("Le client n'est pas connu dans notre agence, on l'ajoute à notre liste de client connu");
             }
