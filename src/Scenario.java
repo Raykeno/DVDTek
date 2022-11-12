@@ -58,7 +58,7 @@ public class Scenario {
         // Print pour vérifier le calcul
         System.out.println(
                 "(" + support.getPrixTypeSupport() + " eur support, " + film.getPrix() + " eur film, " + location.getPrixDuree()
-                + " eur duree)");
+                + " eur duree, " + film.getPrixCategorie() + " eur categorie)");
 
         System.out.println("le client devra revenir le " + location.getDateRetourToString() + " , pour ne pas avoir de penalité");
     }

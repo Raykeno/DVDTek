@@ -16,7 +16,10 @@ public class Facturation {
         this.support = support;
     }
     public void calculerPrixFinal() {
-        this.prixFinal =  this.location.getPrixDuree() + this.support.getFilm().getPrix() + this.support.getPrixTypeSupport();
+        this.prixFinal =  this.location.getPrixDuree() +
+                this.support.getFilm().getPrix() +
+                this.support.getPrixTypeSupport() +
+                this.support.getFilm().getPrixCategorie();
     }
 
     public void calculerPrixTTC(){

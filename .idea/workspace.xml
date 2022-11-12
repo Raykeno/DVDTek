@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Mis le scénario dans sa propre classe + mis du random pour tester">
-      <change afterPath="$PROJECT_DIR$/src/Scenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Facturation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facturation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GlobalVals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalVals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +82,7 @@
       <workItem from="1666969885354" duration="1029000" />
       <workItem from="1667667924860" duration="1067000" />
       <workItem from="1668002234027" duration="2032000" />
-      <workItem from="1668256745771" duration="10076000" />
+      <workItem from="1668256745771" duration="10346000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>
@@ -139,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668260469385</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Mis le scénario dans sa propre classe + mis du random pour tester">
+      <created>1668267124498</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668267124498</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
