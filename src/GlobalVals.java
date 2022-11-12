@@ -1,7 +1,7 @@
 public interface GlobalVals {
-     int DUREE_1 = 24;
-     int DUREE_2 = 48;
-     int DUREE_3 = 72;
+     int TEMPS_DUREE_1 = 24;
+     int TEMPS_DUREE_2 = 48;
+     int TEMPS_DUREE_3 = 72;
 
 
      // Les Duréees sont limitées à 24, 48, 72 heures

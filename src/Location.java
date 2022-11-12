@@ -37,9 +37,9 @@ public class Location {
 
     public int getDuree(){
         return switch (duree) {
-            case DUREE_1 -> GlobalVals.DUREE_1;
-            case DUREE_2 -> GlobalVals.DUREE_2;
-            case DUREE_3 -> GlobalVals.DUREE_3;
+            case DUREE_1 -> GlobalVals.TEMPS_DUREE_1;
+            case DUREE_2 -> GlobalVals.TEMPS_DUREE_2;
+            case DUREE_3 -> GlobalVals.TEMPS_DUREE_3;
         };
     }
 
@@ -100,6 +100,7 @@ public class Location {
         this.remboursement = remboursement;
     }
 
+    // int retard est le nombre de jour en retard
     public void calculerPenalite(int retard) {
         // retard en jour, penalite en euro
         if (retard <= 1) {

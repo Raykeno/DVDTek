@@ -99,6 +99,11 @@ public class Agence {
         }
     }
 
+    public void printLocalFilmList(){
+        System.out.println("Voici une liste de tout nos film avec leurs prix");
+        printFilmList(this.ListFilm);
+    }
+
     public void printClientList(@NotNull List<Client> clientList){
         for (Client client: clientList) {
             System.out.println(client.getNom() + " , " + client.getAge() + " ans");
@@ -117,7 +122,6 @@ public class Agence {
     private boolean clientIsKnown(Client client) {
         for (Client cli : this.ListClient) {
             if (Objects.equals(cli.getNom(), client.getNom())) {
-                System.out.println("Client connu");
                 return true;
             }
         }
@@ -130,7 +134,6 @@ public class Agence {
     private boolean filmIsKnown(String film) {
         for (Film fi : this.ListFilm) {
             if (Objects.equals(fi.getTitre(), film)) {
-                System.out.println("Film connu");
                 return true;
             }
         }

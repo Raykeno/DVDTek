@@ -5,17 +5,18 @@ public class Facturation {
     private float prixTTC; // Prix Final + Calcul pénalité de Location
     private GlobalVals.typePaiement typeDePaiementChoisi;
     private Location location;
-    private Film film;
 
-    public Facturation(GlobalVals.typePaiement typeDePaiementChoisi, Location location, Film film) {
+    private Support support;
+
+    public Facturation(GlobalVals.typePaiement typeDePaiementChoisi, Location location, Support support) {
         this.prixFinal = 0;
         this.prixTTC = 0;
         this.typeDePaiementChoisi = typeDePaiementChoisi;
         this.location = location;
-        this.film = film;
+        this.support = support;
     }
     public void calculerPrixFinal() {
-        this.prixFinal =  this.location.getPrixDuree() + this.film.getPrix();
+        this.prixFinal =  this.location.getPrixDuree() + this.support.getFilm().getPrix() + this.support.getPrixTypeSupport();
     }
 
     public void calculerPrixTTC(){
