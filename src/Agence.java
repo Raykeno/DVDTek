@@ -1,5 +1,4 @@
 import MoyenDePaiement.IMoyenDePaiement;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -125,7 +124,7 @@ public class Agence {
 
     // -------------------------- Fonctions pour print les listes -------------------------------------
 
-    public void printFilmList(@NotNull List<Film> filmList){
+    public void printFilmList( List<Film> filmList){
         for (Film film: filmList) {
             System.out.println(film.getTitre() + " pour " + film.getPrix() + " €");
         }
@@ -136,7 +135,7 @@ public class Agence {
         printFilmList(this.ListFilm);
     }
 
-    public void printClientList(@NotNull List<Client> clientList){
+    public void printClientList( List<Client> clientList){
         for (Client client: clientList) {
             System.out.println(client.getNom() + ", " + client.getAge() + " ans");
         }
@@ -147,7 +146,7 @@ public class Agence {
         printClientList(this.ListClient);
     }
 
-    public void printLocationList(@NotNull List<Location> locationList){
+    public void printLocationList( List<Location> locationList){
         for (Location location: locationList) {
             System.out.println(location.getDuree() + ", " + location.getDateRetourToString());
         }
@@ -158,7 +157,7 @@ public class Agence {
         printLocationList(this.ListLocation);
     }
 
-    public void printSupportList(@NotNull List<Support> supportList){
+    public void printSupportList( List<Support> supportList){
         for (Support support: supportList) {
             System.out.println(support.getFilm().getTitre() + " en " +  support.getSupport());
         }
