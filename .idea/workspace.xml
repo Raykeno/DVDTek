@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Implementation des moyen de paiement en classes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bdd.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bdd.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +95,7 @@
       <workItem from="1668256745771" duration="13929000" />
       <workItem from="1668347117090" duration="283000" />
       <workItem from="1668347416893" duration="1586000" />
+      <workItem from="1668411432169" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>

@@ -1,0 +1,13 @@
+{
+  "Clients": {
+    "id": [1,2,3,4],
+    "nom": ["Clement","Keke","Paul","Arthur"],
+    "sexe": ["M","M","M","M"],
+    "age": [20,20,14,12],
+    "filmsDejaEmprunter": [{
+      "films" : ["Transformers 1","Transporteur 3"]
+    },{
+      "fimls": ["Harry Potter 7"]
+    }]
+  }
+}
