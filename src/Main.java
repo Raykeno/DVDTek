@@ -5,6 +5,8 @@ public class Main {
         new Scenario().init();
         System.out.println("\n\n |--------- Scenario 2 ---------| \n\n");
         new Scenario2().init();
+        System.out.println("\n-----------clement test----------");
+        BddAgence bddAgence = new BddAgence();
     }
 
 }

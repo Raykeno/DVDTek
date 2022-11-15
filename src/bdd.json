@@ -5,9 +5,22 @@
     "sexe": ["M","M","M","M"],
     "age": [20,20,14,12],
     "filmsDejaEmprunter": [{
-      "films" : ["Transformers 1","Transporteur 3"]
+      "film" : ["Transformers 1","Transporteur 3"]
     },{
-      "fimls": ["Harry Potter 7"]
+      "film": ["Harry Potter 7"]
     }]
+  },
+
+  "FilmsAgence": {
+    "support": {
+      "dvd": 2,
+      "blueray": 4
+    },
+    "genre": {
+      "action": 3,
+      "comedie": 6,
+      "sf": 1,
+      "horeur": 3
+    }
   }
 }
