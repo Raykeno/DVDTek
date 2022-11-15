@@ -14,7 +14,7 @@ public class BddAgence {
     protected Object ob;
 
     public BddAgence() throws IOException, ParseException, ClassCastException {
-        this.ob = new JSONParser().parse(new FileReader("/Users/clementseiler/IdeaProjects/DVDTek/src/bdd.json"));
+        this.ob = new JSONParser().parse(new FileReader("./src/bdd.json"));
     }
 
     public Object read_data_basic(String choix)  {
