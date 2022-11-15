@@ -23,7 +23,6 @@ public class BddAgence {
         age.add(1);
         age.add(1);
         age.add(6);
-        age.add(1);
 
         JSONObject JSON = new JSONObject();
         JSONArray tableaudemerde = new JSONArray();
