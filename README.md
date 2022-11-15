@@ -1,7 +1,7 @@
 # DVDTek
 La DVDTheque
 
-Projet POO, à rendre pour le 8? novembre
+Projet POO, à rendre pour le 16 novembre à 22h
 
 Check cours info pour le sujet
 
