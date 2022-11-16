@@ -146,6 +146,7 @@ public class BddAgence {
             e.printStackTrace();
         }
 
+        System.out.println("Le nouveau client "+nom+" à été ajoué a la BDD de l'agence");
 
     }
 
