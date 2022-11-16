@@ -33,7 +33,7 @@ public class Client {
         return age;
     }
 
-    public void setArgent(float argent){
+    public void setArgent(float argent) {
         this.argent = argent;
     }
 }

@@ -3,7 +3,7 @@ public class Reglement {
     private Client client;
     private Facturation facturation;
 
-    public Reglement( Client client, Facturation facturation) {
+    public Reglement(Client client, Facturation facturation) {
         this.client = client;
         this.facturation = facturation;
     }

@@ -3,9 +3,11 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.*;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.List;
 
 public class BddAgence {
     //doit permettre de gerer les données posséder par l'agence (films choisi par les clients,
@@ -30,45 +32,7 @@ public class BddAgence {
     }
 
     public Object read_data_basic(String choix) {
-        //basic = nom, age, id
-        ArrayList<Integer> age = new ArrayList<>();
-        age.add(1);
-        age.add(1);
-        age.add(6);
 
-        JSONObject JSON = new JSONObject();
-        JSONObject Test = new JSONObject();
-        String[] essai = {"hey", "pote"};
-        Test.put("amis", List.of(essai));
-        JSONArray tableaudemerde = new JSONArray();
-        tableaudemerde.add(age);
-
-
-        JSON.put("nom", age);
-
-        //System.out.println("JSON = "+JSON);
-
-        String[] array = {"Titou", "Clemence"};
-        JSONObject js = (JSONObject) this.ob;
-        //JSONObject Clients = (JSONObject) js.get("Clients");
-        //System.out.println("Client = "+Clients);
-
-        //Clients.remove("nom");
-
-
-        //System.out.println("tab = "+tableaudemerde);
-
-//        JSONArray nomArray = (JSONArray) Clients.get("nom");
-        // Clients.put("nom",age);
-        //String tab = nomArray.toString();
-        //System.out.println("Client apres remove "+Clients);
-
-
-       /*System.out.println("First name is: " + firstName);
-        System.out.println("Last name is: " + lastName);*/
-
-
-        //vrai fonction
 
         JSONObject Clients = (JSONObject) this.ob;
 
@@ -95,7 +59,7 @@ public class BddAgence {
 
         JsonArray = (JSONArray) Json.get("filmsDejaEmprunter");
         if (JsonArray.size() > id) {
-            System.out.println(JsonArray.get(id));
+            System.out.println("Films emprunter par l'id : " + id + " =" + JsonArray.get(id));
         } else
             System.out.println("erreur id trop grand");
 
@@ -166,16 +130,16 @@ public class BddAgence {
         categorie.add(genre);
 
         filmClient.remove("film");
-        filmClient.put("film",film);
+        filmClient.put("film", film);
 
         filmClient.remove("categorie");
-        filmClient.put("categorie",categorie);
+        filmClient.put("categorie", categorie);
 
         filmsDejaEmprunter.remove(id);
-        filmsDejaEmprunter.add(id,filmClient);
+        filmsDejaEmprunter.add(id, filmClient);
 
         Json.remove("filmsDejaEmprunter");
-        Json.put("filmsDejaEmprunter",filmsDejaEmprunter);
+        Json.put("filmsDejaEmprunter", filmsDejaEmprunter);
 
         NewRead();
 

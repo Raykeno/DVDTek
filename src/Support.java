@@ -13,7 +13,7 @@ public class Support {
         this.support = support;
     }
 
-    public Support(){
+    public Support() {
         new Support(false, new Film(), GlobalVals.typeSupport.DVD);
     }
 
@@ -41,7 +41,7 @@ public class Support {
         this.film = film;
     }
 
-    public float getPrixTypeSupport(){
+    public float getPrixTypeSupport() {
         return switch (this.support) {
             case DVD -> GlobalVals.PRIX_SUPPORT_DVD;
             case BluRay -> GlobalVals.PRIX_SUPPORT_BLURAY;

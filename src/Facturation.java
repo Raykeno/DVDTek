@@ -15,14 +15,15 @@ public class Facturation {
         this.location = location;
         this.support = support;
     }
+
     public void calculerPrixFinal() {
-        this.prixFinal =  this.location.getPrixDuree() +
+        this.prixFinal = this.location.getPrixDuree() +
                 this.support.getFilm().getPrix() +
                 this.support.getPrixTypeSupport() +
                 this.support.getFilm().getPrixCategorie();
     }
 
-    public void calculerPrixTTC(){
+    public void calculerPrixTTC() {
         this.prixTTC = this.getPrixFinal() + this.location.getPenalite();
     }
 

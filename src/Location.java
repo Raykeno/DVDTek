@@ -35,7 +35,7 @@ public class Location {
         return duree;
     }
 
-    public int getDuree(){
+    public int getDuree() {
         return switch (duree) {
             case DUREE_1 -> GlobalVals.TEMPS_DUREE_1;
             case DUREE_2 -> GlobalVals.TEMPS_DUREE_2;
@@ -47,12 +47,16 @@ public class Location {
         this.duree = duree;
     }
 
-    public void setDureeWithInt(int dureeInt){
-        switch (dureeInt){
-            case 24: duree = GlobalVals.durees.DUREE_1;
-            case 48: duree = GlobalVals.durees.DUREE_2;
-            case 72: duree = GlobalVals.durees.DUREE_3;
-            default: duree = GlobalVals.durees.DUREE_1; // Il faut mettre une bonne valeur!
+    public void setDureeWithInt(int dureeInt) {
+        switch (dureeInt) {
+            case 24:
+                duree = GlobalVals.durees.DUREE_1;
+            case 48:
+                duree = GlobalVals.durees.DUREE_2;
+            case 72:
+                duree = GlobalVals.durees.DUREE_3;
+            default:
+                duree = GlobalVals.durees.DUREE_1; // Il faut mettre une bonne valeur!
         }
     }
 
@@ -72,11 +76,11 @@ public class Location {
         return dateRetour;
     }
 
-    public Date getDateRetourToString(){
+    public Date getDateRetourToString() {
         return dateRetour.getTime();
     }
 
-    public Date getDateDebutToString(){
+    public Date getDateDebutToString() {
         return dateDebut.getTime();
     }
 
@@ -118,12 +122,12 @@ public class Location {
 
     /**
      * public void calculerRemboursement(int avance) {
-     *         // avance en heure, remboursement en euro
-     *         if (avance > 0) {
-     *             remboursement = ((prixDuree/getDuree())/12) * avance;
-     *         } else {
-     *             remboursement = 0;
-     *         }
+     * // avance en heure, remboursement en euro
+     * if (avance > 0) {
+     * remboursement = ((prixDuree/getDuree())/12) * avance;
+     * } else {
+     * remboursement = 0;
+     * }
      * }
      */
 
@@ -133,15 +137,15 @@ public class Location {
             int avance = 0;
 
             if (avance >= 0 && avance <= 12) {
-                remboursement = ((prixDuree/getDuree())/12) * avance;
+                remboursement = ((prixDuree / getDuree()) / 12) * avance;
             } else if (avance >= 12 && avance <= 24) {
-                remboursement = ((prixDuree/getDuree())/12) * avance;
+                remboursement = ((prixDuree / getDuree()) / 12) * avance;
             } else if (avance >= 24 && avance <= 36) {
-                remboursement = ((prixDuree/getDuree())/12) * avance;
+                remboursement = ((prixDuree / getDuree()) / 12) * avance;
             } else if (avance >= 36 && avance <= 48) {
-                remboursement = ((prixDuree/getDuree())/12) * avance;
-            } else if(avance >= 48 && avance <= 60) {
-                remboursement = ((prixDuree/getDuree())/12) * avance;
+                remboursement = ((prixDuree / getDuree()) / 12) * avance;
+            } else if (avance >= 48 && avance <= 60) {
+                remboursement = ((prixDuree / getDuree()) / 12) * avance;
             } else {
                 remboursement = 0;
             }

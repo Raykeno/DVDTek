@@ -5,6 +5,7 @@ import java.util.GregorianCalendar;
 import java.util.Random;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
+
 public class Scenario {
 
     public Agence agence;
@@ -12,7 +13,7 @@ public class Scenario {
     public Film film;
     public Support support;
 
-    public void init(){
+    public void init() {
 
         Random random = new Random();
 
@@ -41,7 +42,7 @@ public class Scenario {
         // Méthode envoyer une list de film a Agence
 
         agence.isAnyMovieAvailablePrint();
-        if(!agence.isAnyMovieAvailable()){
+        if (!agence.isAnyMovieAvailable()) {
             return;
         }
 
@@ -50,14 +51,14 @@ public class Scenario {
         // Si le client prend un film indisponible, il prend un autre film
         System.out.println("");
 
-        while (agence.isFilmAvailableToBePicked(film)){
+        while (agence.isFilmAvailableToBePicked(film)) {
             agence.isFilmAvailablePrint(film);
             film = agence.clientChooseRandomFilm();
         }
 
         agence.isFilmAvailablePrint(film);
 
-        System.out.println("\nLe client choisi " + film.getTitre()+"\n");
+        System.out.println("\nLe client choisi " + film.getTitre() + "\n");
 
         Location location = new Location(GlobalVals.durees.DUREE_1, cDate, 0, 0);
 
@@ -86,7 +87,7 @@ public class Scenario {
         // Print pour vérifier le calcul
         System.out.println(
                 "(" + support.getPrixTypeSupport() + " eur support, " + film.getPrix() + " eur film, " + location.getPrixDuree()
-                + " eur duree, " + film.getPrixCategorie() + "eur categorie)\n");
+                        + " eur duree, " + film.getPrixCategorie() + "eur categorie)\n");
 
         boolean didTheyPay = agence.payerLaFacture(client, facturation, new CarteBancaire(), support, location);
 
@@ -98,14 +99,14 @@ public class Scenario {
                 if (random.nextBoolean()) {
                     System.out.println("\nLe client rend le film en avance.");
                     int avance = new Random().ints(1, 1, 60).findFirst().getAsInt();
-                    System.out.println(avance+"h d'avance !");
-                    float remboursement = (facturation.getPrixFinal()/12) * avance/24; // avance en j
-                    System.out.println("Remboursement : "+remboursement+"euros.");
+                    System.out.println(avance + "h d'avance !");
+                    float remboursement = (facturation.getPrixFinal() / 12) * avance / 24; // avance en j
+                    System.out.println("Remboursement : " + remboursement + "euros.");
                 } else {
                     System.out.println("\nLe client rend le film en retard.");
                     int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
-                    System.out.println(retard+"jour(s) de retard...");
-                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
+                    System.out.println(retard + "jour(s) de retard...");
+                    System.out.println("Pénalité : " + location.getPenalite() + "euros.");
                 }
             } else {
                 System.out.println("\nLe client ne dispose pas d'un compte prépayé.");
@@ -113,19 +114,19 @@ public class Scenario {
                     System.out.println("\nLe client rend le film à l'heure.");
                 } else {
                     int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
-                    System.out.println(retard+"jour(s) de retard...");
-                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
+                    System.out.println(retard + "jour(s) de retard...");
+                    System.out.println("Pénalité : " + location.getPenalite() + "euros.");
                 }
             }
         }
     }
 
-    public static GlobalVals.durees randomDuree(Random random)  {
+    public static GlobalVals.durees randomDuree(Random random) {
         GlobalVals.durees[] durees = GlobalVals.durees.values();
         return durees[random.nextInt(durees.length)];
     }
 
-    public static int getDuree(GlobalVals.durees duree){
+    public static int getDuree(GlobalVals.durees duree) {
         return switch (duree) {
             case DUREE_1 -> GlobalVals.TEMPS_DUREE_1;
             case DUREE_2 -> GlobalVals.TEMPS_DUREE_2;
@@ -134,7 +135,7 @@ public class Scenario {
     }
 
     // -1 dans le mois parce qu'on compte depuis 0 les mois, ex : Janvier -> 0, Février -> 1
-    public static int[] calculDate(String duree){
+    public static int[] calculDate(String duree) {
 
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime retour = now.plusHours(Long.parseLong((duree)));
@@ -143,7 +144,7 @@ public class Scenario {
         int retourMonth = Integer.parseInt(DateTimeFormatter.ofPattern("MM").format(retour));
         int retourDay = Integer.parseInt(DateTimeFormatter.ofPattern("dd").format(retour));
 
-        int[] dateTabReturn = {retourYear, retourMonth-1, retourDay};
+        int[] dateTabReturn = {retourYear, retourMonth - 1, retourDay};
         return dateTabReturn;
     }
 }
