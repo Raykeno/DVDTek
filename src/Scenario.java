@@ -105,19 +105,7 @@ public class Scenario {
                     System.out.println("\nLe client rend le film en retard.");
                     int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
                     System.out.println(retard+"jour(s) de retard...");
-                    float penalite = 0;
-                    if (retard <= 1) {
-                        penalite = 2f;
-                    } else if (retard <= 2) {
-                        penalite = 5f;
-                    } else if (retard <= 3) {
-                        penalite = 10f;
-                    } else if (retard <= 4) {
-                        penalite = 15f;
-                    } else {
-                        penalite = 20f;
-                    }
-                    System.out.println("Pénalité : "+penalite+"euros.");
+                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
                 }
             } else {
                 System.out.println("\nLe client ne dispose pas d'un compte prépayé.");
@@ -126,19 +114,7 @@ public class Scenario {
                 } else {
                     int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
                     System.out.println(retard+"jour(s) de retard...");
-                    float penalite = 0;
-                    if (retard <= 1) {
-                        penalite = 2f;
-                    } else if (retard <= 2) {
-                        penalite = 5f;
-                    } else if (retard <= 3) {
-                        penalite = 10f;
-                    } else if (retard <= 4) {
-                        penalite = 15f;
-                    } else {
-                        penalite = 20f;
-                    }
-                    System.out.println("Pénalité : "+penalite+"euros.");
+                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
                 }
             }
         }
