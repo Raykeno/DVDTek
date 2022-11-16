@@ -1,1 +1,42 @@
-{"filmsDejaEmprunter":[{"categorie":["sf","action"],"film":["Transformers 1","Transporteur 3"]},{"categorie":["sf","sf","sf","sf","sf","sf","sf"],"film":["Harry Potter 7","Avengers","Avengers","Avengers","Avengers","Avengers","Avengers"]},{"categorie":[],"film":[]}],"id":[1,2,3],"nom":["Clement","Keke","Paul"],"age":[20,20,14]}
+{
+  "filmsDejaEmprunter": [
+    {
+      "categorie": [
+        "sf",
+        "action"
+      ],
+      "film": [
+        "Transformers 1",
+        "Transporteur 3"
+      ]
+    },
+    {
+      "categorie": [
+        "sf"
+      ],
+      "film": [
+        "Harry Potter 7"
+
+      ]
+    },
+    {
+      "categorie": [],
+      "film": []
+    }
+  ],
+  "id": [
+    1,
+    2,
+    3
+  ],
+  "nom": [
+    "Clement",
+    "Keke",
+    "Paul"
+  ],
+  "age": [
+    20,
+    20,
+    14
+  ]
+}
