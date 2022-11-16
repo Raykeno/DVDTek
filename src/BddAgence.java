@@ -56,8 +56,7 @@ public class BddAgence {
         // Clients.put("nom",age);
         //String tab = nomArray.toString();
         //System.out.println("Client apres remove "+Clients);
-        String firstName = js.get("Clients").toString();
-        String lastName = (String) js.get("lastName");
+
 
        /*System.out.println("First name is: " + firstName);
         System.out.println("Last name is: " + lastName);*/
@@ -65,8 +64,7 @@ public class BddAgence {
 
         //vrai fonction
 
-        JSONObject Json = (JSONObject) this.ob;
-        JSONObject Clients = (JSONObject) Json.get("Clients");
+        JSONObject Clients = (JSONObject) this.ob;
 
 
         switch (choix) {

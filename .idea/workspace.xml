@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="update de bddagence">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BddAgence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BddAgence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario2.java" afterDir="false" />
-    </list>
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="update de bddagence" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +102,7 @@
       <workItem from="1668411432169" duration="961000" />
       <workItem from="1668438543803" duration="8404000" />
       <workItem from="1668504651367" duration="11887000" />
-      <workItem from="1668594779439" duration="11207000" />
+      <workItem from="1668594779439" duration="11868000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>
@@ -230,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668608164948</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update de bddagence">
+      <created>1668608953362</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1668608953362</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update de bddagence">
+      <created>1668609851057</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1668609851057</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
