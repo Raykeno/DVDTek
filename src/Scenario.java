@@ -92,6 +92,30 @@ public class Scenario {
 
         if (didTheyPay) {
             System.out.println("\nle client devra revenir le " + location.getDateRetourToString() + " , pour ne pas avoir de penalité");
+
+            if (random.nextBoolean()) {
+                System.out.println("\nle client dispose d'un compte prépayé.");
+                if (random.nextBoolean()) {
+                    System.out.println("\nLe client rend le film en avance.");
+                    int avance = new Random().ints(1, 1, 60).findFirst().getAsInt();
+                    System.out.println(avance+"h d'avance !");
+                    System.out.println("Remboursement : "+location.getRemboursement()+"euros.");
+                } else {
+                    System.out.println("\nLe client rend le film en retard.");
+                    int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
+                    System.out.println(retard+"jour(s) de retard...");
+                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
+                }
+            } else {
+                System.out.println("\nLe client ne dispose pas d'un compte prépayé.");
+                if (random.nextBoolean()) {
+                    System.out.println("\nLe client rend le film à l'heure.");
+                } else {
+                    int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
+                    System.out.println(retard+"jour(s) de retard...");
+                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
+                }
+            }
         }
     }
 
