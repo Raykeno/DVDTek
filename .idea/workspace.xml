@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="Classe CartePrepaye.java">
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BddAgence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BddAgence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bdd.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bdd.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,8 @@
       <workItem from="1668347416893" duration="1586000" />
       <workItem from="1668411432169" duration="961000" />
       <workItem from="1668438543803" duration="8404000" />
-      <workItem from="1668504651367" duration="11818000" />
+      <workItem from="1668504651367" duration="11887000" />
+      <workItem from="1668594779439" duration="5495000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>
@@ -203,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668529301966</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures">
+      <created>1668529374372</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668529374372</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +257,7 @@
     <MESSAGE value="Rajout du prix categorie dans le calcul du prix" />
     <MESSAGE value="Implementation des moyen de paiement en classes" />
     <MESSAGE value="Classe CartePrepaye.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe CartePrepaye.java" />
+    <MESSAGE value="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures" />
+    <option name="LAST_COMMIT_MESSAGE" value="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures" />
   </component>
 </project>

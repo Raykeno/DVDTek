@@ -11,8 +11,9 @@ public class Main {
         new Scenario2().init();
         System.out.println("\n-----------clement test----------");
         BddAgence bddAgence = new BddAgence();
-        System.out.println(bddAgence.read_data_basic("id"));
-        bddAgence.Read_FilmsDejaEmprunter(0);
+        //System.out.println(bddAgence.read_data_basic("id"));
+        //bddAgence.Read_FilmsDejaEmprunter(0);
+        bddAgence.WriteNewClient(new Client("Theo",35, 12.0f));
 
     }
 

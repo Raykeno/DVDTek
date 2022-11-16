@@ -1,14 +1,21 @@
 {
   "Clients": {
-    "id": [1,2,3,4],
-    "nom": ["Clement","Keke","Paul","Arthur"],
-    "sexe": ["M","M","M","M"],
-    "age": [20,20,14,12],
+    "id": [1,2,3],
+    "nom": ["Clement","Keke","Paul"],
+    "sexe": ["M","M","M"],
+    "age": [20,20,14],
     "filmsDejaEmprunter": [{
-      "film" : ["Transformers 1","Transporteur 3"]
+      "film" : ["Transformers 1","Transporteur 3"],
+      "categorie": ["sf","action"]
     },{
-      "film": ["Harry Potter 7"]
-    }]
+      "film": ["Harry Potter 7"],
+      "categorie": ["sf"]
+    },
+      {
+        "film": [],
+        "categorie":[]
+      }
+    ]
   },
 
   "FilmsAgence": {
