@@ -106,21 +106,46 @@ public class BddAgence {
         //----------------
 
         JSONObject Json = (JSONObject) this.ob;
-        JSONObject Client = (JSONObject) Json.get("Client");
+        JSONObject Client = (JSONObject) Json;
+        JSONArray idJson = (JSONArray) Client.get("id");
+        JSONArray nomJson = (JSONArray) Client.get("nom");
+        JSONArray ageJson = (JSONArray) Client.get("age");
+        JSONArray filmsDejaEmprunter = (JSONArray) Client.get("filmsDejaEmprunter");
+        ArrayList<String> list = new ArrayList<>();
+        Integer size = idJson.size();
 
-        JSONObject nomJson = (JSONObject) Client.get("id");
+        //ajout du nouveau client
+        idJson.add(size+1);
+        nomJson.add(nom);
+        ageJson.add(age);
+
+        //ajout de l'espace pour stocker les films du client
+        JSONObject newFilmsDejaEmprunter = new JSONObject();
+        newFilmsDejaEmprunter.put("categorie",list);
+        newFilmsDejaEmprunter.put("film",list);
+        filmsDejaEmprunter.add(newFilmsDejaEmprunter);
+
+        //----------------------------
+
+        Client.remove("nom");
+        Client.put("nom",nomJson);
+
+        Client.remove("age");
+        Client.put("age",ageJson);
+
+        Client.remove("filmsDejaEmprunter");
+        Client.put("filmsDejaEmprunter",filmsDejaEmprunter);
+
+        Client.remove("id");
+        Client.put("id",idJson);
 
         //ecriture
-        try (PrintWriter out = new PrintWriter(new FileWriter(this.path));) {
-           // out.write("hey les mes");
+       try (PrintWriter out = new PrintWriter(new FileWriter(this.path));) {
+            out.write(Client.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // this.out.write("hey les filles");
-        System.out.println("first = " + this.ob);
-        //this.out.write(this.ob.toString());
-        //System.out.println("Deuxieme = "+this.ob);
 
     }
 

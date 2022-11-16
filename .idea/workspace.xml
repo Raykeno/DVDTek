@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures">
+    <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="update de bddagence">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BddAgence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BddAgence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -107,7 +107,7 @@
       <workItem from="1668411432169" duration="961000" />
       <workItem from="1668438543803" duration="8404000" />
       <workItem from="1668504651367" duration="11887000" />
-      <workItem from="1668594779439" duration="5495000" />
+      <workItem from="1668594779439" duration="10428000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout film">
       <created>1665761156061</created>
@@ -214,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668529374372</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update de bddagence">
+      <created>1668603056549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668603056549</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +265,7 @@
     <MESSAGE value="Implementation des moyen de paiement en classes" />
     <MESSAGE value="Classe CartePrepaye.java" />
     <MESSAGE value="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures" />
-    <option name="LAST_COMMIT_MESSAGE" value="BddAgence.java avec les fonctions de lectures il manque les fonctions d'écritures" />
+    <MESSAGE value="update de bddagence" />
+    <option name="LAST_COMMIT_MESSAGE" value="update de bddagence" />
   </component>
 </project>
