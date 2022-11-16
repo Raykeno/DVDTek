@@ -20,7 +20,6 @@ Dans la constitution du prix de location il faut prendre en compte :
 
 - [x] une identification complète du client
 - [ ] la mémorisation des locations qui ont été effectuées avec la date de la location
-- [ ] la mémorisation d’éléments statistiques comme :
 - [x] dénombrement par support (DVD / Blue Ray)
 - [x] dénombrement par genre (action, comédie...)
 - [ ] préférence en terme de catégorie (loue essentiellement des sorties récentes...)
