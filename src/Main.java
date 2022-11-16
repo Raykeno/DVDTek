@@ -14,6 +14,7 @@ public class Main {
         //System.out.println(bddAgence.read_data_basic("id"));
         //bddAgence.Read_FilmsDejaEmprunter(0);
         bddAgence.NewRead();
+        bddAgence.read_data_basic("nom");
         bddAgence.WriteNewClient(new Client("Pauline",12, 0.0f));
 
     }

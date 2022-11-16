@@ -34,7 +34,6 @@ public class BddAgence {
         JSONObject Test = new JSONObject();
         String[] essai = {"hey", "pote"};
         Test.put("amis", List.of(essai));
-        System.out.println("Test = " + Test);
         JSONArray tableaudemerde = new JSONArray();
         tableaudemerde.add(age);
 
