@@ -13,9 +13,11 @@ public class Main {
         BddAgence bddAgence = new BddAgence();
         //System.out.println(bddAgence.read_data_basic("id"));
         //bddAgence.Read_FilmsDejaEmprunter(0);
-        bddAgence.NewRead();
+       // bddAgence.NewRead();
         bddAgence.read_data_basic("nom");
-        bddAgence.WriteNewClient(new Client("Pauline",12, 0.0f));
+        bddAgence.Read_FilmsDejaEmprunter(1);
+        bddAgence.WriteNewMovieClient(1,"Avengers","sf");
+        //bddAgence.WriteNewClient(new Client("Pauline",12, 0.0f));
 
     }
 

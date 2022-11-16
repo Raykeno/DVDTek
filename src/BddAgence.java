@@ -13,14 +13,20 @@ public class BddAgence {
     protected Object ob;
     protected PrintWriter out;
     protected String path = "./src/bdd.json";
+    Integer size;
 
     public BddAgence() throws IOException, ParseException, ClassCastException {
-        // this.ob = new JSONParser().parse(new FileReader(this.path));
-
+        this.ob = new JSONParser().parse(new FileReader(this.path));
+        JSONObject read = (JSONObject) this.ob;
+        JSONArray array = (JSONArray) read.get("id");
+        this.size = array.size();
     }
 
     public void NewRead() throws IOException, ParseException {
         this.ob = new JSONParser().parse(new FileReader(this.path));
+        JSONObject read = (JSONObject) this.ob;
+        JSONArray array = (JSONArray) read.get("id");
+        this.size = array.size();
     }
 
     public Object read_data_basic(String choix) {
@@ -86,7 +92,7 @@ public class BddAgence {
     public Object Read_FilmsDejaEmprunter(int id) {
         JSONObject Json = (JSONObject) this.ob;
         JSONArray JsonArray = new JSONArray();
-        Json = (JSONObject) Json.get("Clients");
+
         JsonArray = (JSONArray) Json.get("filmsDejaEmprunter");
         if (JsonArray.size() > id) {
             System.out.println(JsonArray.get(id));
@@ -96,7 +102,7 @@ public class BddAgence {
         return new Object();
     }
 
-    public void WriteNewClient(Client client) {
+    public void WriteNewClient(Client client) throws IOException, ParseException {
         String nom = client.getNom();
         Integer age = client.getAge();
         float argent = client.getArgent();
@@ -112,51 +118,77 @@ public class BddAgence {
         Integer size = idJson.size();
 
         //ajout du nouveau client
-        idJson.add(size+1);
+        idJson.add(size + 1);
         nomJson.add(nom);
         ageJson.add(age);
 
         //ajout de l'espace pour stocker les films du client
         JSONObject newFilmsDejaEmprunter = new JSONObject();
-        newFilmsDejaEmprunter.put("categorie",list);
-        newFilmsDejaEmprunter.put("film",list);
+        newFilmsDejaEmprunter.put("categorie", list);
+        newFilmsDejaEmprunter.put("film", list);
         filmsDejaEmprunter.add(newFilmsDejaEmprunter);
 
         //----------------------------
 
         Client.remove("nom");
-        Client.put("nom",nomJson);
+        Client.put("nom", nomJson);
 
         Client.remove("age");
-        Client.put("age",ageJson);
+        Client.put("age", ageJson);
 
         Client.remove("filmsDejaEmprunter");
-        Client.put("filmsDejaEmprunter",filmsDejaEmprunter);
+        Client.put("filmsDejaEmprunter", filmsDejaEmprunter);
 
         Client.remove("id");
-        Client.put("id",idJson);
+        Client.put("id", idJson);
 
         //ecriture
-       try (PrintWriter out = new PrintWriter(new FileWriter(this.path));) {
+        try (PrintWriter out = new PrintWriter(new FileWriter(this.path));) {
             out.write(Client.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Le nouveau client "+nom+" à été ajoué a la BDD de l'agence");
+        NewRead();
+        System.out.println("Le nouveau client " + nom + " à été ajoué a la BDD de l'agence");
 
     }
 
-    public void WriteNewMovie() {
+
+    public void WriteNewMovieClient(int id, String newFilm, String genre) throws IOException, ParseException {
+        JSONObject Json = (JSONObject) this.ob;
+        JSONArray filmsDejaEmprunter = (JSONArray) Json.get("filmsDejaEmprunter");
+        JSONObject filmClient = (JSONObject) filmsDejaEmprunter.get(id);
+
+        JSONArray film = (JSONArray) filmClient.get("film");
+        JSONArray categorie = (JSONArray) filmClient.get("categorie");
+        film.add(newFilm);
+        categorie.add(genre);
+
+        filmClient.remove("film");
+        filmClient.put("film",film);
+
+        filmClient.remove("categorie");
+        filmClient.put("categorie",categorie);
+
+        filmsDejaEmprunter.remove(id);
+        filmsDejaEmprunter.add(id,filmClient);
+
+        Json.remove("filmsDejaEmprunter");
+        Json.put("filmsDejaEmprunter",filmsDejaEmprunter);
+
+        NewRead();
+
+        //ecriture
+        try (PrintWriter out = new PrintWriter(new FileWriter(this.path));) {
+            out.write(Json.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Le film " + newFilm + " à été ajouté a la liste des films du client possédant l'id : " + id);
+
 
     }
 
-    public void WriteNewMovieClient() {
-
-    }
-
-    public void WriteStatistic() {
-
-    }
 }
 
