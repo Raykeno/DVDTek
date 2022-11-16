@@ -17,8 +17,8 @@ public class Scenario {
         Random random = new Random();
 
         agence = new Agence();
-        client = agence.getListClient().get(random.nextInt(agence.getListClient().size()));
-        support = agence.getListSupport().get(random.nextInt(agence.getListSupport().size()));
+        client = agence.randomClientFromList();
+        support = agence.clientChooseRandomSupport();
         film = support.getFilm();
 
         GlobalVals.durees dureeRandom = randomDuree(random);
@@ -32,30 +32,50 @@ public class Scenario {
         cDate.set(dateEnTab[0], dateEnTab[1], dateEnTab[2]);
 
         // On rajoute la location dans notre liste actuel de duration
-        Location location = new Location(GlobalVals.durees.DUREE_1, cDate, 0, 0);
-        agence.addLocationToList(location);
-        Facturation facturation = new Facturation(GlobalVals.typePaiement.CB, location, support);
-
-        location.setDuree(dureeRandom);
-        int dureeChoisi = location.getDuree();
 
 
         agence.clientEntreDansAgence(client, true);
 
         // Scénario 1 : Le client arrive dans l'agence et demande plusieurs films et leurs durées
-        System.out.println("\nScenario 1 \n");
+        System.out.println("\nScenario 1");
         // Méthode envoyer une list de film a Agence
 
-        // Agence va utiliser des méthodes pour vérifier si les films en question existe et répond en conséquences
+        agence.isAnyMovieAvailablePrint();
+        if(!agence.isAnyMovieAvailable()){
+            return;
+        }
+
         agence.printLocalFilmList();
+
+        // Si le client prend un film indisponible, il prend un autre film
+        System.out.println("");
+
+        while (agence.isFilmAvailableToBePicked(film)){
+            agence.isFilmAvailablePrint(film);
+            film = agence.clientChooseRandomFilm();
+        }
+
+        agence.isFilmAvailablePrint(film);
 
         System.out.println("\nLe client choisi " + film.getTitre()+"\n");
 
+        Location location = new Location(GlobalVals.durees.DUREE_1, cDate, 0, 0);
+
+        location.setDuree(dureeRandom);
+        int dureeChoisi = location.getDuree();
+
+
+
+        /*
         if (!support.estDisponible()) {
             System.out.println("Le client a choisi un film avec un support qui n'est pas disponible");
             System.out.println("Le client quitte le magasin...");
             return;
         }
+
+         */
+
+        Facturation facturation = new Facturation(GlobalVals.typePaiement.CB, location, support);
 
         location.calculerPenalite(0);
         facturation.calculerPrixFinal();
@@ -68,7 +88,7 @@ public class Scenario {
                 "(" + support.getPrixTypeSupport() + " eur support, " + film.getPrix() + " eur film, " + location.getPrixDuree()
                 + " eur duree, " + film.getPrixCategorie() + "eur categorie)\n");
 
-        boolean didTheyPay = agence.payerLaFacture(client, facturation, new CarteBancaire());
+        boolean didTheyPay = agence.payerLaFacture(client, facturation, new CarteBancaire(), support, location);
 
         if (didTheyPay) {
             System.out.println("\nle client devra revenir le " + location.getDateRetourToString() + " , pour ne pas avoir de penalité");
