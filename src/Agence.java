@@ -7,6 +7,7 @@ import java.util.*;
 
 public class Agence {
     private Client clientActuel;
+    private Random random = new Random();
 
     // MockData pour tester
     private final Film[] Film_connu = {
@@ -110,7 +111,9 @@ public class Agence {
         List<Support> supportList = getSupportListFromSpecificSupport(typeSupport, false);
         if (supportList.size() == 0) {
             System.out.println("Il n'y a plus de " +typeSupport+ " dans notre agence");
+            return;
         }
+        System.out.println("\nVoici une liste de film sur un support " + typeSupport + " , on en a " + supportList.size());
         printSupportList(supportList);
     }
 
@@ -118,8 +121,32 @@ public class Agence {
         List<Film> genreListFilm = getFilmListFromGenre(genre, false);
         if (genreListFilm.size() == 0) {
             System.out.println("Il n'y a pas de film de " +genre+ " dans notre agence");
+            return;
         }
+        System.out.println("\nVoici une liste de film de genre " + genre + " , on en a " + genreListFilm.size());
         printFilmList(genreListFilm);
+    }
+
+    public void getFilmListFromGenrePrintRandom(){
+        getFilmListFromGenrePrint(randomGenre());
+    }
+
+    public void getFilmListFromSupportPrintRandom(){
+        getSupportListFromSpecificSupportPrint(randomSupport());
+    }
+
+    public void denombrerToutGenre(){
+        for (GlobalVals.genres genre : GlobalVals.genres.values()) {
+            List<Film> currentFilmList = getFilmListFromGenre(genre,false);
+            System.out.println("Nous avons " + currentFilmList.size() + " Film(s) du genre " + genre);
+        }
+    }
+
+    public void denombrerToutSupport(){
+        for (GlobalVals.typeSupport typeSupport : GlobalVals.typeSupport.values()) {
+            List<Support> currentSupportList = getSupportListFromSpecificSupport(typeSupport,false);
+            System.out.println("Nous avons " + currentSupportList.size() + " Film(s) en " + typeSupport);
+        }
     }
 
     // -------------------------- Fonctions pour print les listes -------------------------------------
@@ -208,7 +235,7 @@ public class Agence {
         }
     }
 
-    public boolean payerLaFacture(Client client, Facturation facture, IMoyenDePaiement moyenDePaiement){
+    public boolean payerLaFacture(Client client, Facturation facture, IMoyenDePaiement moyenDePaiement, Support support, Location location){
         System.out.println("Le client va utiliser un/une " + moyenDePaiement.getNom()+ "\n");
         facture.calculerPrixFinal();
         if (client.getArgent() < facture.getPrixFinal()){
@@ -217,6 +244,88 @@ public class Agence {
         }
         client.setArgent(client.getArgent() - facture.getPrixFinal());
         System.out.println("Le client a payé la facture, il lui reste : " + client.getArgent() + " euros");
+        support.setEstDisponible(false);
+        this.ListLocation.add(location);
         return true;
+    }
+
+    public boolean isFilmAvailableToBePicked(Film film){
+        int nbFilmAvailable = 0;
+
+        for (Support support : ListSupport) {
+            if (support.getFilm() == film && support.estDisponible()){
+                nbFilmAvailable += 1;
+            }
+        }
+
+        // On veut conserver au moins un film avec un support dans le magasin
+        if (nbFilmAvailable > 1){
+            return true;
+        }
+
+        return false;
+    }
+
+    public void isFilmAvailablePrint(Film film) {
+        boolean resultFromFunc = isFilmAvailableToBePicked(film);
+        if (resultFromFunc) {
+            System.out.println("Le film " + film.getTitre() + " n'est pas disponible dans notre agence");
+        } else {
+            System.out.println(film.getTitre() + " est bel et bien disponible dans notre agence");
+        }
+    }
+
+    public Film clientChooseRandomFilm(){
+        Film film;
+
+        film = ListFilm.get(this.random.nextInt(this.ListFilm.size()));
+
+        return film;
+    }
+
+    public Support clientChooseRandomSupport(){
+        Support support;
+
+        support = ListSupport.get(this.random.nextInt(this.ListSupport.size()));
+
+        return support;
+    }
+
+    public Client randomClientFromList(){
+        Client client;
+
+        client = ListClient.get(this.random.nextInt(this.ListClient.size()));
+
+        return client;
+    }
+
+    public boolean isAnyMovieAvailable(){
+
+        for (Film film : ListFilm) {
+            boolean result = isFilmAvailableToBePicked(film);
+            if (result) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void isAnyMovieAvailablePrint(){
+        if (isAnyMovieAvailable()){
+            System.out.println("\nNous avons des films disponible dans notre agence\n");
+        } else {
+            System.out.println("\nIl n'y a aucun film disponible dans notre agence :(");
+        }
+    }
+
+    public GlobalVals.genres randomGenre()  {
+        GlobalVals.genres[] genres = GlobalVals.genres.values();
+        return genres[this.random.nextInt(genres.length)];
+    }
+
+    public GlobalVals.typeSupport randomSupport()  {
+        GlobalVals.typeSupport[] typeSupports = GlobalVals.typeSupport.values();
+        return typeSupports[this.random.nextInt(typeSupports.length)];
     }
 }
