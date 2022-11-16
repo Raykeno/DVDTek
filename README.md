@@ -5,7 +5,11 @@ Projet POO, à rendre pour le 16 novembre à 22h
 
 Check cours info pour le sujet
 
-Les membres sont dans les contributeurs 👍 
+Les membres sont :
+- Otto HAJDU
+- Clement SEILER
+- Leo SEGUIN
+- Ewan GULLAUD
 
 Étape 1 :
 
