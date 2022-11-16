@@ -99,12 +99,25 @@ public class Scenario {
                     System.out.println("\nLe client rend le film en avance.");
                     int avance = new Random().ints(1, 1, 60).findFirst().getAsInt();
                     System.out.println(avance+"h d'avance !");
-                    System.out.println("Remboursement : "+location.getRemboursement()+"euros.");
+                    float remboursement = (facturation.getPrixFinal()/12) * avance/24; // avance en j
+                    System.out.println("Remboursement : "+remboursement+"euros.");
                 } else {
                     System.out.println("\nLe client rend le film en retard.");
                     int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
                     System.out.println(retard+"jour(s) de retard...");
-                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
+                    float penalite = 0;
+                    if (retard <= 1) {
+                        penalite = 2f;
+                    } else if (retard <= 2) {
+                        penalite = 5f;
+                    } else if (retard <= 3) {
+                        penalite = 10f;
+                    } else if (retard <= 4) {
+                        penalite = 15f;
+                    } else {
+                        penalite = 20f;
+                    }
+                    System.out.println("Pénalité : "+penalite+"euros.");
                 }
             } else {
                 System.out.println("\nLe client ne dispose pas d'un compte prépayé.");
@@ -113,7 +126,19 @@ public class Scenario {
                 } else {
                     int retard = new Random().ints(1, 1, 5).findFirst().getAsInt();
                     System.out.println(retard+"jour(s) de retard...");
-                    System.out.println("Pénalité : "+location.getPenalite()+"euros.");
+                    float penalite = 0;
+                    if (retard <= 1) {
+                        penalite = 2f;
+                    } else if (retard <= 2) {
+                        penalite = 5f;
+                    } else if (retard <= 3) {
+                        penalite = 10f;
+                    } else if (retard <= 4) {
+                        penalite = 15f;
+                    } else {
+                        penalite = 20f;
+                    }
+                    System.out.println("Pénalité : "+penalite+"euros.");
                 }
             }
         }
